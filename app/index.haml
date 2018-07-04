@@ -1,0 +1,77 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name:"viewport"}/
+    %meta{name:"theme-color", content:"#fff"}
+    %title Keppler Landing
+    %link{rel:"stylesheet", href:"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"}
+    %link{rel: "stylesheet", href:"assets/css/main.css"}/
+  %body
+    // Navigation
+    %nav.navbar.navbar-expand-lg
+      %a.navbar-brand{:href => "#"} Keppler
+      %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        %ul.navbar-nav
+          %li.nav-item
+            %a.nav-link{:href => "#"} Features
+          %li.nav-item
+            %a.nav-link{:href => "#"} Producto
+          %li.nav-item
+            %a.nav-link{:href => "#"} About
+          %li.nav-item
+            %a.nav-link{:href => "#"} Contacto
+    // Home
+    %section#home
+      .mask-home
+        %h1
+          Crea y gestiona los
+          %br contenidos en tu web
+        %button.btn.cta{href:"#"} Iniciar proyecto
+        %button.sandbox{href:"#"} Comienza con una muestra
+    // Features
+    %section#features.padding-section
+      .container
+        .section-title
+          %h1.features Administra tu página web
+          %span.subtitle Gestiona tú mismo todo el contenido de manera fácil
+        .row
+          .col-md-8.offset-2
+            .feature-img
+              %img{src:"assets/img/keppler_screen.png", alt:""}
+          .col-md-6.offset-3
+            .feature-text
+              %span Haz que tu negocio tradicional se ajuste a las nuevas formas de vender
+            .feature-icons
+              %ul
+                %li
+                  .icon-circle#red
+                    %img{src:"assets/img/adaptabilidad_icon.png"}
+                  %span Adaptabilidad
+                %li
+                  .icon-circle#light-blue
+                    %img{src:"assets/img/cosmico_icon.png"}
+                  %span Manejo Cósmico
+                %li
+                  .icon-circle#dark-red
+                    %img{src:"assets/img/control_icon.png"}
+                  %span Control y Escabilidad
+                %li
+                  .icon-circle#dark-blue
+                    %img{src:"assets/img/evolucion_icon.png"}
+                  %span Usabilidad y evolución
+    // Products
+    %section#products.padding-section
+      .container
+        .section-title
+          %h1.products 
+            Esto es apenas una muestra
+            %br de lo que puedes lograr
+
+
+    %script{:src => "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"}
+    %script{:src => "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"}
+    %script{src: "assets/js/main.js"}
