@@ -7,13 +7,15 @@
     %title Keppler Landing
     %link{rel:"stylesheet", href:"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"}
     %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.1.0/css/all.css", :integrity => "sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt", :rel => "stylesheet"}/
+    %link{rel: "stylesheet", href:"assets/css/slick-theme.css"}/
+    %link{rel: "stylesheet", href:"assets/css/slick.css"}/
     %link{rel: "stylesheet", href:"assets/css/main.css"}/
   %body
     // Navigation
     %nav.navbar.navbar-expand-lg
       %a.navbar-brand{:href => "#"} Keppler
-      %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
+      -# %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+      -#   %span.navbar-toggler-icon
       #navbarNav.collapse.navbar-collapse
         %ul.navbar-nav
           %li.nav-item
@@ -26,6 +28,7 @@
             %a.nav-link{:href => "#"} Contacto
     // Home
     %section#home
+      #particles-js
       .mask-home
         %h1
           Crea y gestiona los
@@ -33,7 +36,7 @@
         %button.btn.cta{href:"#"} Iniciar proyecto
         %button.sandbox{href:"#"} Comienza con una muestra
     // Features
-    %section#features.padding-section
+    %section#features.padding-section.d-none.d-md-block
       .container
         .section-title
           %h1.features Administra tu página web
@@ -63,6 +66,44 @@
                   .icon-circle#dark-blue
                     %img{src:"assets/img/evolucion_icon.png"}
                   %span Usabilidad y evolución
+    // Features - Slider
+    %section#features-xs.padding-section.d-md-none
+      .container
+        .section-title
+          %h1.features Administra tu página web
+          %span.subtitle Gestiona tú mismo todo el contenido de manera fácil
+        .row
+          .col-md-8.offset-md-2
+            .slider-for
+              .feature-img
+                %img{src:"assets/img/keppler_screen.png", alt:""}
+              .feature-img
+                %img{src:"https://images.unsplash.com/photo-1531210488748-d1620f6506a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2789589eeaf861e53a2e05c716250b7a&auto=format&fit=crop&w=1050&q=80", alt:""}
+              .feature-img
+                %img{src:"https://images.unsplash.com/photo-1531199250311-f5755dcc55c5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4e3dbc5ec5bf998459018748937df203&auto=format&fit=crop&w=1050&q=80", alt:""}
+              .feature-img
+                %img{src:"https://images.unsplash.com/photo-1531228040767-7a99c3ff4489?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=136f18f5c843c1f8a1e60eaeac6cffb5&auto=format&fit=crop&w=500&q=60", alt:""}
+          .col-md-6.offset-md-3
+            .feature-text
+              %span Haz que tu negocio tradicional se ajuste a las nuevas formas de vender
+            .feature-icons-xs
+              .slider-nav
+                %li
+                  .icon-circle#red
+                    %img{src:"assets/img/adaptabilidad_icon.png"}
+                  %span Adaptabilidad
+                %li
+                  .icon-circle#light-blue
+                    %img{src:"assets/img/cosmico_icon.png"}
+                  %span Manejo Cósmico
+                %li
+                  .icon-circle#dark-red
+                    %img{src:"assets/img/control_icon.png"}
+                  %span Control y Escabilidad
+                %li
+                  .icon-circle#dark-blue
+                    %img{src:"assets/img/evolucion_icon.png"}
+                  %span Usabilidad y evolución
     // Producto
     %section#products.padding-section
       .container
@@ -72,44 +113,47 @@
             %br de lo que puedes lograr
         .row
           .col-lg-12.padding-section
-            .row
-              .col-lg-7
-                .product-img
-                  %img{src:"assets/img/keppler_screen_producto.png", style:"width:100%;"}
-              .col-lg-5
-                .product-description
-                  %h1
-                    Personaliza la
-                    %br interfaz
-                  .call-to-actions
-                    %button.btn.cta-product Iniciar proyecto
-                    %button.sandbox-product{href:"#"} Comienza con una muestra
+            .container
+              .row
+                .col-lg-7.col-xs-12
+                  .product-img
+                    %img{src:"assets/img/keppler_screen_producto.png", style:"width:100%;"}
+                .col-lg-5.col-xs-12
+                  .product-description
+                    %h1
+                      Personaliza la
+                      %br interfaz
+                    .call-to-actions
+                      %button.btn.cta-product Iniciar proyecto
+                      %button.sandbox-product{href:"#"} Comienza con una muestra
           .col-lg-12.padding-section
-            .row
-              .col-lg-5
-                .product-description.pl-0
-                  %h1
-                    Crea tus propias
-                    %br galerías de imágenes
-                  .call-to-actions
-                    %button.btn.cta-product Iniciar proyecto
-                    %button.sandbox-product{href:"#"} Comienza con una muestra
-              .col-lg-7
-                .product-img
-                  %img{src:"assets/img/keppler_screen_producto.png", style:"width:100%;"}
+            .container
+              .row
+                .col-lg-5.col-xs-12
+                  .product-description.pl-0
+                    %h1
+                      Crea tus propias
+                      %br galerías de imágenes
+                    .call-to-actions
+                      %button.btn.cta-product Iniciar proyecto
+                      %button.sandbox-product{href:"#"} Comienza con una muestra
+                .col-lg-7.col-xs-12.order-custom
+                  .product-img
+                    %img{src:"assets/img/keppler_screen_producto.png", style:"width:100%;"}
           .col-lg-12.padding-section
-            .row
-              .col-lg-7
-                .product-img
-                  %img{src:"assets/img/keppler_screen_producto.png", style:"width:100%;"}
-              .col-lg-5
-                .product-description
-                  %h1
-                    Mantén tu blog
-                    %br actualizado
-                  .call-to-actions
-                    %button.btn.cta-product Iniciar proyecto
-                    %button.sandbox-product{href:"#"} Comienza con una muestra
+            .container
+              .row
+                .col-lg-7.col-xs-12
+                  .product-img
+                    %img{src:"assets/img/keppler_screen_producto.png", style:"width:100%;"}
+                .col-lg-5.col-xs-12
+                  .product-description
+                    %h1
+                      Mantén tu blog
+                      %br actualizado
+                    .call-to-actions
+                      %button.btn.cta-product Iniciar proyecto
+                      %button.sandbox-product{href:"#"} Comienza con una muestra
       // Producto
     %section#about.padding-section
       .container
@@ -120,7 +164,8 @@
         .row
           .col-lg-6
             .about-card#control
-              %img{src:"assets/img/control.png"}
+              .icon-control
+              -# %img{src:"assets/img/control.png"}
               .about-content
                 %h1 Completo control
                 %p
@@ -131,15 +176,17 @@
                   ofrecen lo mejor
           .col-lg-6
             .about-card#blog
-              %img{src:"assets/img/blog.png"}
+              .icon-blog
+              -# %img{src:"assets/img/blog.png"}
               .about-content
                 %h1 Un blog para compartir información
                 %p
                   Como capitán necesita una bitácora de viaje (blog) y con ella podrá contar y mostrar, de la mejor manera, sus experiencias de viaje
                   y otras misiones para que otros puedan saber de usted y así atraer a los usuarios adecuados.
           .col-lg-6
-            .about-card#galeria
-              %img{src:"assets/img/galeria.png"}
+            .about-card#gallery
+              .icon-gallery
+              -# %img{src:"assets/img/galeria.png"}
               .about-content
                 %h1 Álbumes dinámicos para su web
                 %p
@@ -147,8 +194,9 @@
                   ofrecer lo mejor de lo mejor a quienes acudan a usted. Despliéguese de la mejor manera con los
                   formularios de contacto y escuche cuáles son las necesidades de los usuarios para acompañarlo en su viaje.
           .col-lg-6
-            .about-card#crea
-              %img{src:"assets/img/crea.png"}
+            .about-card#create
+              .icon-create
+              -# %img{src:"assets/img/crea.png"}
               .about-content
                 %h1 Imagine, cree, repita
                 %p
@@ -205,8 +253,10 @@
               %a{href:"#"} Slice Group
 
 
-    %script{:src => "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
-    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"}
-    %script{:src => "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"}
-    %script{:src => "https://www.google.com/recaptcha/api.js"}
+    %script{src: "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"}
+    %script{src: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"}
+    %script{src: "https://www.google.com/recaptcha/api.js"}
+    %script{src: "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"}
+    %script{src: "assets/js/slick.min.js"}
     %script{src: "assets/js/main.js"}

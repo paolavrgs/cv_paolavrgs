@@ -8,6 +8,8 @@
   <title>Keppler Landing</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
   <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" rel="stylesheet">
+  <link href="assets/css/slick-theme.css" rel="stylesheet">
+  <link href="assets/css/slick.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
@@ -15,9 +17,6 @@
   <!-- / Navigation -->
   <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#">Keppler</a>
-    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -37,6 +36,7 @@
   </nav>
   <!-- / Home -->
   <section id="home">
+    <div id="particles-js"></div>
     <div class="mask-home">
       <h1>
         Crea y gestiona los
@@ -47,7 +47,7 @@
     </div>
   </section>
   <!-- / Features -->
-  <section class="padding-section" id="features">
+  <section class="padding-section d-none d-md-block" id="features">
     <div class="container">
       <div class="section-title">
         <h1 class="features">Administra tu página web</h1>
@@ -95,6 +95,66 @@
       </div>
     </div>
   </section>
+  <!-- / Features - Slider -->
+  <section class="padding-section d-md-none" id="features-xs">
+    <div class="container">
+      <div class="section-title">
+        <h1 class="features">Administra tu página web</h1>
+        <span class="subtitle">Gestiona tú mismo todo el contenido de manera fácil</span>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="slider-for">
+            <div class="feature-img">
+              <img alt="" src="assets/img/keppler_screen.png">
+            </div>
+            <div class="feature-img">
+              <img alt="" src="https://images.unsplash.com/photo-1531210488748-d1620f6506a5?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=2789589eeaf861e53a2e05c716250b7a&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80">
+            </div>
+            <div class="feature-img">
+              <img alt="" src="https://images.unsplash.com/photo-1531199250311-f5755dcc55c5?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=4e3dbc5ec5bf998459018748937df203&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80">
+            </div>
+            <div class="feature-img">
+              <img alt="" src="https://images.unsplash.com/photo-1531228040767-7a99c3ff4489?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=136f18f5c843c1f8a1e60eaeac6cffb5&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 offset-md-3">
+          <div class="feature-text">
+            <span>Haz que tu negocio tradicional se ajuste a las nuevas formas de vender</span>
+          </div>
+          <div class="feature-icons-xs">
+            <div class="slider-nav">
+              <li>
+                <div class="icon-circle" id="red">
+                  <img src="assets/img/adaptabilidad_icon.png">
+                </div>
+                <span>Adaptabilidad</span>
+              </li>
+              <li>
+                <div class="icon-circle" id="light-blue">
+                  <img src="assets/img/cosmico_icon.png">
+                </div>
+                <span>Manejo Cósmico</span>
+              </li>
+              <li>
+                <div class="icon-circle" id="dark-red">
+                  <img src="assets/img/control_icon.png">
+                </div>
+                <span>Control y Escabilidad</span>
+              </li>
+              <li>
+                <div class="icon-circle" id="dark-blue">
+                  <img src="assets/img/evolucion_icon.png">
+                </div>
+                <span>Usabilidad y evolución</span>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- / Producto -->
   <section class="padding-section" id="products">
     <div class="container">
@@ -106,63 +166,69 @@
       </div>
       <div class="row">
         <div class="col-lg-12 padding-section">
-          <div class="row">
-            <div class="col-lg-7">
-              <div class="product-img">
-                <img src="assets/img/keppler_screen_producto.png" style="width:100%;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7 col-xs-12">
+                <div class="product-img">
+                  <img src="assets/img/keppler_screen_producto.png" style="width:100%;">
+                </div>
               </div>
-            </div>
-            <div class="col-lg-5">
-              <div class="product-description">
-                <h1>
-                  Personaliza la
-                  <br>interfaz</br>
-                </h1>
-                <div class="call-to-actions">
-                  <button class="btn cta-product">Iniciar proyecto</button>
-                  <button class="sandbox-product" href="#">Comienza con una muestra</button>
+              <div class="col-lg-5 col-xs-12">
+                <div class="product-description">
+                  <h1>
+                    Personaliza la
+                    <br>interfaz</br>
+                  </h1>
+                  <div class="call-to-actions">
+                    <button class="btn cta-product">Iniciar proyecto</button>
+                    <button class="sandbox-product" href="#">Comienza con una muestra</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-12 padding-section">
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="product-description pl-0">
-                <h1>
-                  Crea tus propias
-                  <br>galerías de imágenes</br>
-                </h1>
-                <div class="call-to-actions">
-                  <button class="btn cta-product">Iniciar proyecto</button>
-                  <button class="sandbox-product" href="#">Comienza con una muestra</button>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5 col-xs-12">
+                <div class="product-description pl-0">
+                  <h1>
+                    Crea tus propias
+                    <br>galerías de imágenes</br>
+                  </h1>
+                  <div class="call-to-actions">
+                    <button class="btn cta-product">Iniciar proyecto</button>
+                    <button class="sandbox-product" href="#">Comienza con una muestra</button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-7">
-              <div class="product-img">
-                <img src="assets/img/keppler_screen_producto.png" style="width:100%;">
+              <div class="col-lg-7 col-xs-12 order-custom">
+                <div class="product-img">
+                  <img src="assets/img/keppler_screen_producto.png" style="width:100%;">
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-12 padding-section">
-          <div class="row">
-            <div class="col-lg-7">
-              <div class="product-img">
-                <img src="assets/img/keppler_screen_producto.png" style="width:100%;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7 col-xs-12">
+                <div class="product-img">
+                  <img src="assets/img/keppler_screen_producto.png" style="width:100%;">
+                </div>
               </div>
-            </div>
-            <div class="col-lg-5">
-              <div class="product-description">
-                <h1>
-                  Mantén tu blog
-                  <br>actualizado</br>
-                </h1>
-                <div class="call-to-actions">
-                  <button class="btn cta-product">Iniciar proyecto</button>
-                  <button class="sandbox-product" href="#">Comienza con una muestra</button>
+              <div class="col-lg-5 col-xs-12">
+                <div class="product-description">
+                  <h1>
+                    Mantén tu blog
+                    <br>actualizado</br>
+                  </h1>
+                  <div class="call-to-actions">
+                    <button class="btn cta-product">Iniciar proyecto</button>
+                    <button class="sandbox-product" href="#">Comienza con una muestra</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -183,7 +249,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="about-card" id="control">
-            <img src="assets/img/control.png">
+            <div class="icon-control"></div>
             <div class="about-content">
               <h1>Completo control</h1>
               <p>
@@ -195,7 +261,7 @@
         </div>
         <div class="col-lg-6">
           <div class="about-card" id="blog">
-            <img src="assets/img/blog.png">
+            <div class="icon-blog"></div>
             <div class="about-content">
               <h1>Un blog para compartir información</h1>
               <p>
@@ -205,8 +271,8 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="about-card" id="galeria">
-            <img src="assets/img/galeria.png">
+          <div class="about-card" id="gallery">
+            <div class="icon-gallery"></div>
             <div class="about-content">
               <h1>Álbumes dinámicos para su web</h1>
               <p>
@@ -217,8 +283,8 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="about-card" id="crea">
-            <img src="assets/img/crea.png">
+          <div class="about-card" id="create">
+            <div class="icon-create"></div>
             <div class="about-content">
               <h1>Imagine, cree, repita</h1>
               <p>
@@ -312,6 +378,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

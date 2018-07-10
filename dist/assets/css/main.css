@@ -9,13 +9,41 @@ body {
   padding: 0;
 }
 
+#particles-js {
+  position: absolute;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #particles-js {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #particles-js {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #particles-js {
+    height: 65%;
+  }
+}
+
 .section-title {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.section-title .features, .section-title .products, .section-title .about {
+@media (min-width: 0px) and (max-width: 767px) {
+  .section-title br {
+    display: none;
+  }
+}
+
+.section-title .title-style, .section-title .features, .section-title .products, .section-title .about {
   color: #1a1515;
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
@@ -23,6 +51,12 @@ body {
   flex-basis: 100%;
   text-align: center;
   width: 70%;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .section-title .title-style, .section-title .features, .section-title .products, .section-title .about {
+    font-size: 20px;
+  }
 }
 
 .section-title .products {
@@ -47,8 +81,26 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .section-title .subtitle {
+    text-align: center;
+  }
+}
+
 .padding-section {
   padding: 50px 0;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .order-custom {
+    order: -1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .order-custom {
+    order: -1;
+  }
 }
 
 .cta, .send-btn {
@@ -66,6 +118,13 @@ body {
 
 .cta:hover, .send-btn:hover {
   transition: all ease-in-out .3s;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .cta, .send-btn {
+    font-size: 10px;
+    padding: 15px 30px;
+  }
 }
 
 .cta-product {
@@ -90,6 +149,12 @@ body {
   text-decoration: underline;
   font-family: 'Open Sans';
   font-size: 15px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .sandbox {
+    font-size: 10px;
+  }
 }
 
 .sandbox-product {
@@ -144,6 +209,12 @@ body {
   z-index: 9;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .navbar {
+    padding-left: 1rem;
+  }
+}
+
 .navbar .navbar-brand {
   color: #f44336;
   font-family: "Patua One", cursive;
@@ -185,12 +256,26 @@ body {
   padding-left: 40px;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  #home .mask-home {
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+
 #home .mask-home h1 {
   flex-basis: 100%;
   color: #1a1515;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 50px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #home .mask-home h1 {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 #features {
@@ -270,6 +355,88 @@ body {
   background-color: #2a3c5b;
 }
 
+#features-xs {
+  width: 100%;
+}
+
+#features-xs .feature-img {
+  margin: 30px 0;
+}
+
+#features-xs .feature-img img {
+  width: 100%;
+  height: auto;
+}
+
+#features-xs .feature-text {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#features-xs .feature-text span {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+#features-xs .feature-icons-xs li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#features-xs .feature-icons-xs li .icon-circle {
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  width: 70px;
+}
+
+#features-xs .feature-icons-xs li .icon-circle img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+#features-xs .feature-icons-xs li span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+#features-xs .feature-icons-xs #red {
+  background-color: #f44336;
+}
+
+#features-xs .feature-icons-xs #light-blue {
+  background-color: #15aeda;
+}
+
+#features-xs .feature-icons-xs #dark-red {
+  background-color: #ea2522;
+}
+
+#features-xs .feature-icons-xs #dark-blue {
+  background-color: #2a3c5b;
+}
+
+.slick-dots {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+
+.slick-dots li button::before {
+  font-size: 25px;
+}
+
 #products {
   color: #fff;
   background: linear-gradient(to bottom, #ff5754 0%, #800200 100%);
@@ -299,7 +466,7 @@ body {
 
 #about .about-card {
   align-items: center;
-  background-color: #fafafa;
+  background-color: #f5f5f5;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   border-radius: 15px;
   display: flex;
@@ -308,11 +475,6 @@ body {
   padding: 0;
   position: relative;
   width: 100%;
-}
-
-#about .about-card img {
-  height: 75%;
-  object-fit: contain;
 }
 
 #about .about-card .about-content {
@@ -331,31 +493,64 @@ body {
   color: #1a1515;
 }
 
+.icon, #control .icon-control, #blog .icon-blog, #gallery .icon-gallery, #create .icon-create {
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#control .icon-control {
+  background-image: url("../img/control.png");
+  background-size: 85%;
+}
+
 #control h1 {
   color: #ea2522;
+}
+
+#blog .icon-blog {
+  background-image: url("../img/blog.png");
+  background-size: 70%;
 }
 
 #blog h1 {
   color: #15aeda;
 }
 
-#galeria h1 {
+#gallery .icon-gallery {
+  background-image: url("../img/galeria.png");
+  background-size: 90%;
+}
+
+#gallery h1 {
   color: #ea2522;
 }
 
-#crea h1 {
+#create .icon-create {
+  background-image: url("../img/crea.png");
+  background-size: 75%;
+}
+
+#create h1 {
   color: #2a3c5b;
 }
 
 .cta-footer {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .cta-footer {
+    justify-content: center;
+  }
 }
 
 .cta-footer .cta-footer-inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .cta-footer .cta-footer-inner span {
@@ -366,6 +561,12 @@ body {
 .sandbox-footer {
   display: flex;
   justify-content: flex-start;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .sandbox-footer {
+    justify-content: center;
+  }
 }
 
 .sandbox-footer .sandbox-footer-inner {
