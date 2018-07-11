@@ -5,11 +5,12 @@
     %meta{content: "width=device-width, initial-scale=1.0", name:"viewport"}/
     %meta{name:"theme-color", content:"#fff"}
     %title Keppler Landing
+    %link{:href => "assets/img/favicon.png", :rel => "shortcut icon"}
     %link{rel:"stylesheet", href:"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"}
     %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.1.0/css/all.css", :integrity => "sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt", :rel => "stylesheet"}/
-    %link{rel: "stylesheet", href:"assets/css/slick-theme.css"}/
-    %link{rel: "stylesheet", href:"assets/css/slick.css"}/
-    %link{rel: "stylesheet", href:"assets/css/main.css"}/
+    %link{rel: "stylesheet", href:"assets/css/slick-theme.css"}
+    %link{rel: "stylesheet", href:"assets/css/slick.css"}
+    %link{rel: "stylesheet", href:"assets/css/main.css"}
   %body
     // Navigation
     %nav.navbar.navbar-expand-lg
@@ -28,7 +29,9 @@
             %a.nav-link{:href => "#"} Contacto
     // Home
     %section#home
-      #particles-js
+      #particle-container
+        - 29.times do
+          .particle
       .mask-home
         %h1
           Crea y gestiona los
@@ -36,7 +39,7 @@
         %button.btn.cta{href:"#"} Iniciar proyecto
         %button.sandbox{href:"#"} Comienza con una muestra
     // Features
-    %section#features.padding-section.d-none.d-md-block
+    %section#features.pad-section.d-none.d-md-block
       .container
         .section-title
           %h1.features Administra tu página web
@@ -45,7 +48,7 @@
           .col-md-8.offset-2
             .feature-img
               %img{src:"assets/img/keppler_screen.png", alt:""}
-          .col-md-6.offset-3
+          .col-lg-8.offset-lg-2.col-md-12
             .feature-text
               %span Haz que tu negocio tradicional se ajuste a las nuevas formas de vender
             .feature-icons
@@ -67,7 +70,7 @@
                     %img{src:"assets/img/evolucion_icon.png"}
                   %span Usabilidad y evolución
     // Features - Slider
-    %section#features-xs.padding-section.d-md-none
+    %section#features-xs.pad-section.d-md-none
       .container
         .section-title
           %h1.features Administra tu página web
@@ -105,7 +108,7 @@
                     %img{src:"assets/img/evolucion_icon.png"}
                   %span Usabilidad y evolución
     // Producto
-    %section#products.padding-section
+    %section#products.pad-section
       .container
         .section-title
           %h1.products 
@@ -155,7 +158,7 @@
                       %button.btn.cta-product Iniciar proyecto
                       %button.sandbox-product{href:"#"} Comienza con una muestra
       // Producto
-    %section#about.padding-section
+    %section#about.pad-section
       .container
         .section-title
           %h1.about
@@ -165,7 +168,6 @@
           .col-lg-6
             .about-card#control
               .icon-control
-              -# %img{src:"assets/img/control.png"}
               .about-content
                 %h1 Completo control
                 %p
@@ -177,7 +179,6 @@
           .col-lg-6
             .about-card#blog
               .icon-blog
-              -# %img{src:"assets/img/blog.png"}
               .about-content
                 %h1 Un blog para compartir información
                 %p
@@ -186,7 +187,6 @@
           .col-lg-6
             .about-card#gallery
               .icon-gallery
-              -# %img{src:"assets/img/galeria.png"}
               .about-content
                 %h1 Álbumes dinámicos para su web
                 %p
@@ -196,7 +196,6 @@
           .col-lg-6
             .about-card#create
               .icon-create
-              -# %img{src:"assets/img/crea.png"}
               .about-content
                 %h1 Imagine, cree, repita
                 %p
@@ -251,12 +250,9 @@
             %span 
               &copy; Desarrollado por
               %a{href:"#"} Slice Group
-
-
     %script{src: "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
     %script{src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"}
     %script{src: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"}
     %script{src: "https://www.google.com/recaptcha/api.js"}
-    %script{src: "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"}
     %script{src: "assets/js/slick.min.js"}
     %script{src: "assets/js/main.js"}

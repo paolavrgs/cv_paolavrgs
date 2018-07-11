@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'particles';
 
 body {
   margin: 0;
@@ -62,7 +63,7 @@ body {
     text-align: center;
   }
   .subtitle {
-    color: $main-black;
+    color: $subtitles;
     font-family: $opensans;
     @include respond-to(xs) {
       text-align: center;
@@ -70,8 +71,17 @@ body {
   }
 }
 
+.pad-section {
+  padding: 50px 0;
+}
 .padding-section {
   padding: 50px 0;
+  @include respond-to(xs) {
+    padding: 50px 0 0 0;
+  }
+  @include respond-to(sm) {
+    padding: 50px 0 0 0;
+  }
 }
 
 .order-custom {
@@ -87,7 +97,7 @@ body {
 .cta {
   color: $white;
   background-color: $dark-red;
-  border-radius: 20px;
+  border-radius: 25px;
   letter-spacing: 0.3px;
   margin: 30px 0;
   font-family: $opensans;
@@ -109,7 +119,7 @@ body {
   color: $white;
   background-color: transparent;
   border: 1px solid $white;
-  border-radius: 20px;
+  border-radius: 25px;
   letter-spacing: 0.3px;
   margin: 30px 0;
   font-family: $opensans;
@@ -117,6 +127,10 @@ body {
   font-weight: 700;
   padding: 15px 35px;
   transition: all ease-in-out .3s;
+  &:hover {
+    color: $dark-red;
+    background-color: $white;
+  }
 }
 
 .sandbox {
@@ -137,55 +151,70 @@ body {
   cursor: pointer;
   background: transparent;
   border: none;
-  margin-left: 20px;
+  margin-left: 10px;
   text-decoration: underline;
   font-family: 'Open Sans';
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .btn-cta-footer {
+  width: 81%;
   color: $white;
   background-color: $dark-red;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(50,50,93,.3), 0 5px 15px rgba(0,0,0,.1);
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   letter-spacing: 0.3px;
   margin: 30px 0;
   font-family: $opensans;
   font-size: 15px;
   font-weight: 700;
-  padding: 15px 35px;
-  transition: all ease-in-out .3s;
+  padding: 18px 32px;
+  transition: all ease-in-out .5s;
+  &:hover {
+    transform: translateY(-2px);
+    transition: all ease-in-out .5s;
+    box-shadow: 0 15px 37px rgba(50, 50, 93, 0.2), 0 5px 17px rgba(0, 0, 0, 0.08);
+  }
 }
 
 .btn-sandbox-footer {
   color: $dark-red;
   background-color:$white;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(50,50,93,.2), 0 5px 15px rgba(0,0,0,.07);
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   letter-spacing: 0.3px;
   margin: 30px 0;
   font-family: $opensans;
   font-size: 15px;
   font-weight: 700;
-  padding: 15px 35px;
-  transition: all ease-in-out .3s;
+  padding: 18px 32px;
+  transition: all ease-in-out .5s;
+  &:hover {
+    border: 1px solid $dark-red;
+    transform: translateY(-2px);
+    transition: all ease-in-out .5s;
+    box-shadow: 0 15px 37px rgba(50, 50, 93, 0.2), 0 5px 17px rgba(0, 0, 0, 0.08);
+  }
 }
 
 .send-btn {
   @extend .cta;
-  padding: 10px 30px;
+  padding: 8px 28px;
   font-size: 15px;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 // Navigation
 .navbar {
-  padding-left: 40px;
+  padding-left: 60px;
   background-color: transparent;
   position: absolute;
   z-index: 9;
   @include respond-to(xs) {
     padding-left: 1rem;
+  }
+  @include respond-to(sm) {
+    padding-left: 40px;
   }
   .navbar-brand {
     color: $keppler-main;
@@ -225,10 +254,13 @@ body {
     flex-wrap: wrap;
     align-content: center;
     height: 70%;
-    padding-left: 40px;
+    padding-left: 60px;
     @include respond-to(xs) {
       padding-left: 0;
       justify-content: center;
+    }
+    @include respond-to(sm) {
+      padding-left: 40px;
     }
     h1 {
       flex-basis: 100%;
@@ -239,6 +271,9 @@ body {
       @include respond-to(xs) {
         font-size: 30px;
         text-align: center;
+      }
+      @include respond-to(sm) {
+        font-size: 45px;
       }
     }
   }
@@ -259,6 +294,7 @@ body {
     justify-content: center;
     margin-bottom: 30px;
     span {
+      color: $subtitles;
       font-family: $opensans;
       text-align: center;
       font-size: 15px;
@@ -282,6 +318,7 @@ body {
           height: 70px;
           justify-content: center;
           width: 70px;
+          transition: all ease-in-out .5s;
           img {
             height: 30px;
             width: 30px;
@@ -290,12 +327,13 @@ body {
         }
         span {
           font-family: $opensans;
-          font-size: 10px;
+          font-size: 15px;
           font-weight: 700;
           margin-top: 10px;
         }
       }
       
+      .feature_gray { background-color: gray !important; transition: all ease-in-out .5s; }
       #red { background-color: $keppler-main; }
       #light-blue { background-color: $light-blue; }
       #dark-red { background-color: $dark-red; }
@@ -388,9 +426,18 @@ body {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
+    @include respond-to(xs) {
+      padding: 50px 20px 20px 0;
+    }
+    @include respond-to(sm) {
+      padding: 50px 50px 0 0;
+    }
     h1 {
       font-family: $opensans;
       font-size: 30px;
+      @include respond-to(sm) {
+        flex-basis: 100%;
+      }
     }
     .call-to-actions {
       display: flex;
@@ -407,10 +454,18 @@ body {
     border-radius: 15px;
     display: flex;
     height: 250px;
-    margin-bottom: 50px;
     padding: 0;
     position: relative;
-    width: 100%;
+    margin: 0 5px 40px 5px;
+    transition: all ease-in-out .5s;
+    @include respond-to(xs) {
+      height: auto;
+    }
+    &:hover {
+      transform: translateY(-2px);
+      transition: all ease-in-out .5s;
+      box-shadow: 0 15px 37px rgba(50, 50, 93, 0.2), 0 5px 17px rgba(0, 0, 0, 0.08);
+    }
     .about-content {
       padding: 15px 35px;
     }
@@ -418,11 +473,15 @@ body {
       font-family: $opensans;
       font-size: 20px;
       font-weight: 700;
+      margin-top: 20px;
     }
     p {
+      color: $subtitles;
       font-family: $opensans;
       font-size: 14px;
-      color: $main-black;
+      line-height: 23px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -433,6 +492,15 @@ body {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  transition: all ease-in-out .5s;
+  @include respond-to(xs) {
+    height: 300px;
+  }
+}
+
+.card-title_hover {
+  color: gray !important;
+  transition: all ease-in-out .5s;
 }
 
 #control {
@@ -443,6 +511,12 @@ body {
   }
   h1 {
     color: $dark-red;
+    transition: all ease-in-out .5s;
+  }
+  .icon-control_hover {
+    @extend .icon;
+    background-image: url('../img/control_hover.png');
+    background-size: 85%;
   }
 }
 
@@ -454,6 +528,12 @@ body {
   }
   h1 {
     color: $light-blue;
+    transition: all ease-in-out .5s;
+  }
+  .icon-blog_hover {
+    @extend .icon;
+    background-image: url('../img/blog_hover.png');
+    background-size: 70%;
   }
 }
 
@@ -465,6 +545,12 @@ body {
   }
   h1 {
     color: $dark-red;
+    transition: all ease-in-out .5s;
+  }
+  .icon-gallery_hover {
+    @extend .icon;
+    background-image: url('../img/galeria_hover.png');
+    background-size: 90%;
   }
 }
 
@@ -476,9 +562,14 @@ body {
   }
   h1{
     color: $dark-blue;
+    transition: all ease-in-out .5s;
+  }
+  .icon-create_hover {
+    @extend .icon;
+    background-image: url('../img/crea_hover.png');
+    background-size: 75%;
   }
 }
-
 
 //footer
 .cta-footer {
@@ -488,10 +579,22 @@ body {
   @include respond-to(xs) {
     justify-content: center;
   }
+  @include respond-to(sm) {
+    justify-content: center;
+  }
   .cta-footer-inner {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+    @include respond-to(xs) {
+      padding-right: 0;
+    }
+    @include respond-to(sm) {
+      padding-right: 0;
+    }
     span {
+      color: $subtitles;
       font-size: 15px;
       font-family: $opensans;
     }
@@ -504,11 +607,22 @@ body {
   @include respond-to(xs) {
     justify-content: center;
   }
+  @include respond-to(sm) {
+    justify-content: center;
+  }
   .sandbox-footer-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 20px;
+    @include respond-to(xs) {
+      padding-left: 0;
+    }
+    @include respond-to(sm) {
+      padding-left: 0;
+    }
     span {
+      color: $subtitles;
       font-size: 15px;
       font-family: $opensans;
     }
@@ -520,12 +634,14 @@ body {
   background-image: url('../img/fondo_footer.png');
   background-color: #F5F5F5;
   background-position: bottom;
-  background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
+  @include respond-to(xl) {
+    background-size: cover;
+  }
   span {
     font-size: 15px;
-    color: $main-black;
+    color: $subtitles;
     font-family: $opensans;
     margin-bottom: 50px;
   }
@@ -565,9 +681,17 @@ footer {
   .flex-footer {
     padding: 25px 0;
     display: flex;
+    align-items: center;
     justify-content: space-around;
+    @include respond-to(xs) {
+      flex-wrap: wrap;
+    }
   }
   .social-media {
+    margin-bottom: 0;
+    @include respond-to(xs) {
+      padding-left: 0;
+    }
     li {
       list-style: none;
       display: inline;
@@ -575,17 +699,20 @@ footer {
       a i {
         color: $main-black;
         font-size: 20px;
+        @include respond-to(xs) {
+          font-size: 15px;
+        }
       }
     }
   }
   span {
-    color: $main-black;
+    color: $subtitles;
     font-family: $opensans;
     font-size: 15px;
     a {
-      color: $main-black;
+      color: $subtitles;
       &:hover {
-        color: $main-black;
+        color: $subtitles;
       }
     }
   }
