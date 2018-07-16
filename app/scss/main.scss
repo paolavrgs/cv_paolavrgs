@@ -11,12 +11,15 @@ body {
 
 #particles-js {
   position: absolute;
+
   @include respond-to(xs) {
     display: none;
   }
+
   @include respond-to(sm) {
     display: none;
   }
+
   @include respond-to(md) {
     height: 65%;
   }
@@ -24,47 +27,57 @@ body {
 
 .section-title {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+
   @include respond-to(xs) {
+
     br {
       display: none;
     }
   }
-  .title-style {
+
+  %title-style {
     color: $main-black;
+    flex-basis: 100%;
     font-family: $montserrat;
     font-size: 40px;
     font-weight: 700;
-    flex-basis: 100%;
     text-align: center;
     width: 70%;
+
     @include respond-to(xs) {
       font-size: 20px;
     }
   }
+
   .features {
-    @extend .title-style;
+    @extend %title-style;
   }
+
   .products {
-    @extend .title-style;
+    @extend %title-style;
     color: $white;
   }
+
   .about {
-    @extend .title-style;
+    @extend %title-style;
     margin-bottom: 50px;
   }
+
   .footer-title {
     color: $keppler-main;
+    flex-basis: 100%;
     font-family: $montserrat;
     font-size: 30px;
     font-weight: 700;
-    flex-basis: 100%;
     text-align: center;
   }
+
   .subtitle {
     color: $subtitles;
     font-family: $opensans;
+
     @include respond-to(xs) {
       text-align: center;
     }
@@ -74,13 +87,16 @@ body {
 .pad-section {
   padding: 50px 0;
 }
+
 .padding-section {
   padding: 50px 0;
+
   @include respond-to(xs) {
-    padding: 50px 0 0 0;
+    padding: 50px 0 0;
   }
+
   @include respond-to(sm) {
-    padding: 50px 0 0 0;
+    padding: 50px 0 0;
   }
 }
 
@@ -88,6 +104,7 @@ body {
   @include respond-to(xs) {
     order: -1;
   }
+
   @include respond-to(sm) {
     order: -1;
   }
@@ -95,135 +112,148 @@ body {
 
 //Buttons
 .cta {
-  color: $white;
   background-color: $dark-red;
   border-radius: 25px;
-  letter-spacing: 0.3px;
-  margin: 30px 0;
+  color: $white;
   font-family: $opensans;
   font-size: 15px;
   font-weight: 700;
+  letter-spacing: .3px;
+  margin: 30px 0;
   padding: 15px 35px;
   transition: all ease-in-out .3s;
-  &:hover {
-    // background-color: $dark-red;
-    transition: all ease-in-out .3s;
-  }
+
   @include respond-to(xs) {
     font-size: 10px;
     padding: 15px 30px;
   }
+
+  &:hover {
+    // background-color: $dark-red;
+    transition: all ease-in-out .3s;
+  }
+
 }
 
 .cta-product {
-  color: $white;
   background-color: transparent;
   border: 1px solid $white;
   border-radius: 25px;
-  letter-spacing: 0.3px;
-  margin: 30px 0;
+  color: $white;
   font-family: $opensans;
   font-size: 10px;
   font-weight: 700;
+  letter-spacing: .3px;
+  margin: 30px 0;
   padding: 15px 35px;
   transition: all ease-in-out .3s;
+
   &:hover {
-    color: $dark-red;
     background-color: $white;
+    color: $dark-red;
   }
 }
 
 .sandbox {
-  margin-left: 20px;
-  cursor: pointer;
   background: transparent;
-  border: none;
-  text-decoration: underline;
+  border: 0;
+  cursor: pointer;
   font-family: 'Open Sans';
   font-size: 15px;
+  margin-left: 20px;
+  text-decoration: underline;
+
   @include respond-to(xs) {
     font-size: 10px;
   }
 }
 
 .sandbox-product {
+  background: transparent;
+  border: 0;
   color: $white;
   cursor: pointer;
-  background: transparent;
-  border: none;
-  margin-left: 10px;
-  text-decoration: underline;
   font-family: 'Open Sans';
   font-size: 13px;
+  margin-left: 10px;
+  text-decoration: underline;
 }
 
 .btn-cta-footer {
-  width: 81%;
-  color: $white;
   background-color: $dark-red;
   border-radius: 25px;
   box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
-  letter-spacing: 0.3px;
-  margin: 30px 0;
+  color: $white;
   font-family: $opensans;
   font-size: 15px;
   font-weight: 700;
+  letter-spacing: .3px;
+  margin: 30px 0;
   padding: 18px 32px;
   transition: all ease-in-out .5s;
+  width: 81%;
+
   &:hover {
+    box-shadow: 0 15px 37px rgba(50, 50, 93, .2), 0 5px 17px rgba(0, 0, 0, .08);
     transform: translateY(-2px);
     transition: all ease-in-out .5s;
-    box-shadow: 0 15px 37px rgba(50, 50, 93, 0.2), 0 5px 17px rgba(0, 0, 0, 0.08);
   }
 }
 
 .btn-sandbox-footer {
-  color: $dark-red;
-  background-color:$white;
+  background-color: $white;
   border-radius: 25px;
   box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
-  letter-spacing: 0.3px;
-  margin: 30px 0;
+  color: $dark-red;
   font-family: $opensans;
   font-size: 15px;
   font-weight: 700;
+  letter-spacing: .3px;
+  margin: 30px 0;
   padding: 18px 32px;
   transition: all ease-in-out .5s;
+
   &:hover {
     border: 1px solid $dark-red;
     transform: translateY(-2px);
     transition: all ease-in-out .5s;
-    box-shadow: 0 15px 37px rgba(50, 50, 93, 0.2), 0 5px 17px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 15px 37px rgba(50, 50, 93, .2), 0 5px 17px rgba(0, 0, 0, .08);
   }
 }
 
 .send-btn {
   @extend .cta;
-  padding: 8px 28px;
   font-size: 15px;
   margin: 20px 0;
+  padding: 8px 28px;
 }
 
 // Navigation
 .navbar {
-  padding-left: 60px;
   background-color: transparent;
+  padding-left: 60px;
   position: absolute;
   z-index: 9;
+
   @include respond-to(xs) {
     padding-left: 1rem;
   }
+
   @include respond-to(sm) {
     padding-left: 40px;
   }
+
   .navbar-brand {
     color: $keppler-main;
     font-family: $patua;
     font-size: 35px;
   }
+
   .nav-item {
     padding: 0 15px;
+
     &:hover {
+
       .nav-link {
         // font-weight: 700;
         transition: all ease-in-out .3s;
@@ -241,37 +271,43 @@ body {
 // Home
 #home {
   background-image: url('../img/fondo_inicio.png');
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 128vh;
   position: relative;
   width: 100%;
+
   .mask-home {
-    position: absolute;
-    width: 100%;
+    align-content: center;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
     height: 70%;
     padding-left: 60px;
+    position: absolute;
+    width: 100%;
+
     @include respond-to(xs) {
-      padding-left: 0;
       justify-content: center;
+      padding-left: 0;
     }
+
     @include respond-to(sm) {
       padding-left: 40px;
     }
+
     h1 {
-      flex-basis: 100%;
       color: $main-black;
+      flex-basis: 100%;
       font-family: $montserrat;
-      font-weight: 900;
       font-size: 50px;
+      font-weight: 900;
+
       @include respond-to(xs) {
         font-size: 30px;
         text-align: center;
       }
+
       @include respond-to(sm) {
         font-size: 45px;
       }
@@ -282,49 +318,58 @@ body {
 // Features
 #features {
   width: 100%;
+
   .feature-img {
     margin: 30px 0;
+
     img {
-      width: 100%;
       height: auto;
+      width: 100%;
     }
   }
+
   .feature-text {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+
     span {
       color: $subtitles;
       font-family: $opensans;
-      text-align: center;
       font-size: 15px;
+      text-align: center;
     }
   }
+
   .feature-icons {
     ul {
       display: flex;
       justify-content: space-around;
       padding-left: 0;
+
       li {
-        list-style: none;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        flex-wrap: wrap;  
+        list-style: none;
+
         .icon-circle{
           align-items: center;
-          cursor: pointer;
           border-radius: 50%;
+          cursor: pointer;
           display: flex;
           height: 70px;
           justify-content: center;
-          width: 70px;
           transition: all ease-in-out .5s;
+          width: 70px;
+
           img {
             height: 30px;
-            width: 30px;
             object-fit: contain;
+            width: 30px;
           }
         }
+
         span {
           font-family: $opensans;
           font-size: 15px;
@@ -332,7 +377,7 @@ body {
           margin-top: 10px;
         }
       }
-      
+
       .feature_gray { background-color: gray !important; transition: all ease-in-out .5s; }
       #red { background-color: $keppler-main; }
       #light-blue { background-color: $light-blue; }
@@ -345,44 +390,52 @@ body {
 // Features - Slider
 #features-xs {
   width: 100%;
+
   .feature-img {
     margin: 30px 0;
+
     img {
-      width: 100%;
       height: auto;
+      width: 100%;
     }
   }
+
   .feature-text {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+
     span {
       font-family: $opensans;
-      text-align: center;
       font-size: 15px;
+      text-align: center;
     }
   }
+
   .feature-icons-xs {
     li {
-      list-style: none;
-      display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      display: flex;
       flex-direction: column;
-      .icon-circle{
+      flex-wrap: wrap;
+      list-style: none;
+
+      .icon-circle {
         align-items: center;
-        cursor: pointer;
         border-radius: 50%;
+        cursor: pointer;
         display: flex;
         height: 70px;
         justify-content: center;
         width: 70px;
+
         img {
           height: 30px;
-          width: 30px;
           object-fit: contain;
+          width: 30px;
         }
       }
+
       span {
         font-family: $opensans;
         font-size: 10px;
@@ -390,6 +443,7 @@ body {
         margin-top: 10px;
       }
     }
+
     #red { background-color: $keppler-main; }
     #light-blue { background-color: $light-blue; }
     #dark-red { background-color: $dark-red; }
@@ -414,31 +468,38 @@ body {
 
 // Products
 #products {
-  color: $white;
   background: $red-gradient;
+  color: $white;
   width: 100%;
+
   .product-img {
     width: 100%;
   }
+
   .product-description {
-    padding: 50px;
-    height: 100%;
-    display: flex;
     align-content: center;
+    display: flex;
     flex-wrap: wrap;
+    height: 100%;
+    padding: 50px;
+
     @include respond-to(xs) {
       padding: 50px 20px 20px 0;
     }
+
     @include respond-to(sm) {
       padding: 50px 50px 0 0;
     }
+
     h1 {
       font-family: $opensans;
       font-size: 30px;
+
       @include respond-to(sm) {
         flex-basis: 100%;
       }
     }
+
     .call-to-actions {
       display: flex;
     }
@@ -450,38 +511,43 @@ body {
   .about-card {
     align-items: center;
     background-color: #f5f5f5;
-    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
     border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
     display: flex;
     height: 250px;
+    margin: 0 5px 40px;
     padding: 0;
     position: relative;
-    margin: 0 5px 40px 5px;
     transition: all ease-in-out .5s;
+
     @include respond-to(xs) {
       height: auto;
     }
+
     &:hover {
+      box-shadow: 0 15px 37px rgba(50, 50, 93, .2), 0 5px 17px rgba(0, 0, 0, .08);
       transform: translateY(-2px);
       transition: all ease-in-out .5s;
-      box-shadow: 0 15px 37px rgba(50, 50, 93, 0.2), 0 5px 17px rgba(0, 0, 0, 0.08);
     }
+
     .about-content {
       padding: 15px 35px;
     }
+
     h1 {
       font-family: $opensans;
       font-size: 20px;
       font-weight: 700;
       margin-top: 20px;
     }
+
     p {
       color: $subtitles;
       font-family: $opensans;
       font-size: 14px;
       line-height: 23px;
-      margin-top: 20px;
       margin-bottom: 20px;
+      margin-top: 20px;
     }
   }
 }
@@ -491,8 +557,9 @@ body {
   background-position: left;
   background-repeat: no-repeat;
   height: 100%;
-  width: 100%;
   transition: all ease-in-out .5s;
+  width: 100%;
+
   @include respond-to(xs) {
     height: 300px;
   }
@@ -509,10 +576,12 @@ body {
     background-image: url('../img/control.png');
     background-size: 85%;
   }
+
   h1 {
     color: $dark-red;
     transition: all ease-in-out .5s;
   }
+
   .icon-control_hover {
     @extend .icon;
     background-image: url('../img/control_hover.png');
@@ -526,10 +595,12 @@ body {
     background-image: url('../img/blog.png');
     background-size: 70%;
   }
+
   h1 {
     color: $light-blue;
     transition: all ease-in-out .5s;
   }
+
   .icon-blog_hover {
     @extend .icon;
     background-image: url('../img/blog_hover.png');
@@ -537,16 +608,18 @@ body {
   }
 }
 
-#gallery { 
+#gallery {
   .icon-gallery {
     @extend .icon;
     background-image: url('../img/galeria.png');
     background-size: 90%;
   }
+
   h1 {
     color: $dark-red;
     transition: all ease-in-out .5s;
   }
+
   .icon-gallery_hover {
     @extend .icon;
     background-image: url('../img/galeria_hover.png');
@@ -560,10 +633,12 @@ body {
     background-image: url('../img/crea.png');
     background-size: 75%;
   }
-  h1{
+
+  h1 {
     color: $dark-blue;
     transition: all ease-in-out .5s;
   }
+
   .icon-create_hover {
     @extend .icon;
     background-image: url('../img/crea_hover.png');
@@ -573,30 +648,36 @@ body {
 
 //footer
 .cta-footer {
+  align-items: center;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+
   @include respond-to(xs) {
     justify-content: center;
   }
+
   @include respond-to(sm) {
     justify-content: center;
   }
+
   .cta-footer-inner {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-right: 20px;
+
     @include respond-to(xs) {
       padding-right: 0;
     }
+
     @include respond-to(sm) {
       padding-right: 0;
     }
+
     span {
       color: $subtitles;
-      font-size: 15px;
       font-family: $opensans;
+      font-size: 15px;
     }
   }
 }
@@ -604,64 +685,78 @@ body {
 .sandbox-footer {
   display: flex;
   justify-content: flex-start;
+
   @include respond-to(xs) {
     justify-content: center;
   }
+
   @include respond-to(sm) {
     justify-content: center;
   }
+
   .sandbox-footer-inner {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-left: 20px;
+
     @include respond-to(xs) {
       padding-left: 0;
     }
+
     @include respond-to(sm) {
       padding-left: 0;
     }
+
     span {
       color: $subtitles;
-      font-size: 15px;
       font-family: $opensans;
+      font-size: 15px;
     }
   }
 }
 
 #kepplercontact {
-  padding: 50px 0;
-  background-image: url('../img/fondo_footer.png');
   background-color: #F5F5F5;
+  background-image: url('../img/fondo_footer.png');
   background-position: bottom;
   background-repeat: no-repeat;
+  padding: 50px 0;
   width: 100%;
+
   @include respond-to(xl) {
     background-size: cover;
   }
+
   span {
-    font-size: 15px;
     color: $subtitles;
     font-family: $opensans;
+    font-size: 15px;
     margin-bottom: 50px;
   }
+
   .keppler-form {
-    input, textarea {
+
+    input,
+    textarea {
       background-color: transparent;
-      padding: 5px 15px;
-      font-size: 15px;
+      border-radius: 10px;
       color: $main-black;
       font-family: $opensans;
-      border-radius: 10px;
+      font-size: 15px;
+      padding: 5px 15px;
       resize: none;
+
       &:focus {
-        box-shadow: 0px 0px 0px transparent;
         border: 1px solid $keppler-main;
+        box-shadow: 0 0 0 transparent;
       }
+
       &::placeholder {
         font-family: $opensans;
       }
     }
+
     textarea {
       height: 100px;
     }
@@ -669,48 +764,58 @@ body {
 }
 
 .g-recaptcha {
-  transform: scale(0.7) translateX(-20%);
+  transform: scale(.7) translateX(-20%);
 }
 
 footer {
   background-color: $white;
-  height: 50px;
-  width: 100%;
   display: flex;
+  height: 50px;
   justify-content: space-around;
+  width: 100%;
+
   .flex-footer {
-    padding: 25px 0;
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-around;
+    padding: 25px 0;
+
     @include respond-to(xs) {
       flex-wrap: wrap;
     }
   }
+
   .social-media {
     margin-bottom: 0;
+
     @include respond-to(xs) {
       padding-left: 0;
     }
+
     li {
-      list-style: none;
       display: inline;
+      list-style: none;
       margin: 0 10px;
+
       a i {
         color: $main-black;
         font-size: 20px;
+
         @include respond-to(xs) {
           font-size: 15px;
         }
       }
     }
   }
+
   span {
     color: $subtitles;
     font-family: $opensans;
     font-size: 15px;
+
     a {
       color: $subtitles;
+
       &:hover {
         color: $subtitles;
       }
