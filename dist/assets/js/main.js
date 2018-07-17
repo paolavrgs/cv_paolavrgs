@@ -1,136 +1,28 @@
 // ABOUT HOVER
-$('#control').hover(function(ev) {
-
-  var hover = ['blog','gallery','create'];
-
-  $.each( hover, function(index, val) {
-    $('.icon-' + val).addClass('icon-' + val + '_hover').removeClass('icon-' + val);
-    $('#' + val + ' ' + 'h1').addClass('card-title_hover');
-  });
-
-  // Mouse leave
-  $('#control').mouseleave(function() {
-    $.each( hover, function(index, value) {
-      $('.icon-' + value + '_hover').addClass('icon-' + value).removeClass('icon-' + value + '_hover');
-      $('#' + value + ' ' + 'h1').removeClass('card-title_hover');
-    });
-  });
-})
-
-$('#blog').hover(function(ev) {
-
-  var hover = ['control','gallery','create'];
-
-  $.each( hover, function(index, val) {
-    $('.icon-' + val).addClass('icon-' + val + '_hover').removeClass('icon-' + val);
-    $('#' + val + ' ' + 'h1').addClass('card-title_hover');
-  });
-
-  // Mouse leave
-  $('#blog').mouseleave(function() {
-    $.each( hover, function(index, value) {
-      $('.icon-' + value + '_hover').addClass('icon-' + value).removeClass('icon-' + value + '_hover');
-      $('#' + value + ' ' + 'h1').removeClass('card-title_hover');
-    });
-  });
-})
-
-$('#gallery').hover(function(ev) {
-
-  var hover = ['blog','control','create'];
-
-  $.each( hover, function(index, val) {
-    $('.icon-' + val).addClass('icon-' + val + '_hover').removeClass('icon-' + val);
-    $('#' + val + ' ' + 'h1').addClass('card-title_hover');
-  });
-
-  // Mouse leave
-  $('#gallery').mouseleave(function() {
-    $.each( hover, function(index, value) {
-      $('.icon-' + value + '_hover').addClass('icon-' + value).removeClass('icon-' + value + '_hover');
-      $('#' + value + ' ' + 'h1').removeClass('card-title_hover');
-    });
-  });
-})
-
-$('#create').hover(function(ev) {
-
-  var hover = ['blog','gallery','control'];
-
-  $.each( hover, function(index, val) {
-    $('.icon-' + val).addClass('icon-' + val + '_hover').removeClass('icon-' + val);
-    $('#' + val + ' ' + 'h1').addClass('card-title_hover');
-  });
-
-  // Mouse leave
-  $('#create').mouseleave(function() {
-    $.each( hover, function(index, value) {
-      $('.icon-' + value + '_hover').addClass('icon-' + value).removeClass('icon-' + value + '_hover');
-      $('#' + value + ' ' + 'h1').removeClass('card-title_hover');
-    });
-  });
-})
+$('.about-card').hover(
+  function(){
+    $('.about-card').addClass('icon-hover');
+    $(this).removeClass('icon-hover');
+  },
+  function(){
+    $('.about-card').removeClass('icon-hover');
+  }
+);
 
 //FEATURES HOVER
-$('#red').hover(function(ev) {
-  var features = ['light-blue','dark-blue','dark-red'];
+$('.icon-circle').hover(
+  function(){
+    $('.icon-circle').addClass('feature_gray');
+    $(this).removeClass('feature_gray');
 
-  $.each( features, function(index, a) {
-    $('#' + a).addClass('feature_gray');
-  });
-
-  // Mouse leave
-  $('#red').mouseleave(function() {
-    $.each( features, function(index, r) {
-      $('#' + r).removeClass('feature_gray');
-    });
-  });
-})
-
-$('#light-blue').hover(function(ev) {
-  var features = ['red','dark-blue','dark-red'];
-
-  $.each( features, function(index, a) {
-    $('#' + a).addClass('feature_gray');
-  });
-
-  // Mouse leave
-  $('#light-blue').mouseleave(function() {
-    $.each( features, function(index, r) {
-      $('#' + r).removeClass('feature_gray');
-    });
-  });
-})
-
-$('#dark-blue').hover(function(ev) {
-  var features = ['red','light-blue','dark-red'];
-
-  $.each( features, function(index, a) {
-    $('#' + a).addClass('feature_gray');
-  });
-
-  // Mouse leave
-  $('#dark-blue').mouseleave(function() {
-    $.each( features, function(index, r) {
-      $('#' + r).removeClass('feature_gray');
-    });
-  });
-})
-
-$('#dark-red').hover(function(ev) {
-  var features = ['red','dark-blue','light-blue'];
-
-  $.each( features, function(index, a) {
-    $('#' + a).addClass('feature_gray');
-  });
-
-  // Mouse leave
-  $('#dark-red').mouseleave(function() {
-    $.each( features, function(index, r) {
-      $('#' + r).removeClass('feature_gray');
-    });
-  });
-})
+    var id = $(this).prop('id');
+    $('.feature-img img, .feature-text span').removeClass('active')
+    $('.' + id).addClass('active')
+  },
+  function(){
+    $('.icon-circle').removeClass('feature_gray');
+  }
+);
 
 // SLIDERS
 $('.slider-for').slick({
@@ -148,4 +40,24 @@ $('.slider-nav').slick({
   arrows: false,
   centerMode: true,
   focusOnSelect: true
+});
+
+$("a").click(function(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top - 50
+    }, 1500, function(){
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  } // End if
 });

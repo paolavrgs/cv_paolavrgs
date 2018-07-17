@@ -47,7 +47,7 @@ body {
     width: 70%;
 
     @include respond-to(xs) {
-      font-size: 20px;
+      font-size: 30px;
     }
   }
 
@@ -224,8 +224,13 @@ body {
 .send-btn {
   @extend .cta;
   font-size: 15px;
-  margin: 20px 0;
+  margin: 5px 0;
   padding: 8px 28px;
+}
+
+.flex-captcha-btn {
+  display: flex;
+  justify-content: center;
 }
 
 // Navigation
@@ -270,7 +275,7 @@ body {
 
 // Home
 #home {
-  background-image: url('../img/fondo_inicio.png');
+  // background-image: url('../img/fondo_inicio.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -278,11 +283,50 @@ body {
   position: relative;
   width: 100%;
 
+  .rocket {
+    height: 100%;
+    width: 100%;
+
+    img {
+      position: absolute;
+      right: 15%;
+      top: 10%;
+      transform: rotate(5deg);
+      width: 10%;
+
+      @include respond-to(md) {
+        top: 15%;
+        width: 12.5%;
+      }
+
+      @include respond-to(sm) {
+        top: 15%;
+        width: 15%;
+      }
+
+      @include respond-to(xs) {
+        display: none;
+      }
+    }
+  }
+
+  .clouds {
+    img {
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+
+      @include respond-to(sm) {
+        bottom: 5%;
+      }
+    }
+  }
+
   .mask-home {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
-    height: 70%;
+    height: 80%;
     padding-left: 60px;
     position: absolute;
     width: 100%;
@@ -302,6 +346,7 @@ body {
       font-family: $montserrat;
       font-size: 50px;
       font-weight: 900;
+      margin-bottom: 40px;
 
       @include respond-to(xs) {
         font-size: 30px;
@@ -325,6 +370,10 @@ body {
     img {
       height: auto;
       width: 100%;
+      display: none;
+      &.active {
+        display: block;
+      }
     }
   }
 
@@ -335,9 +384,13 @@ body {
 
     span {
       color: $subtitles;
+      display: none;
       font-family: $opensans;
       font-size: 15px;
       text-align: center;
+      &.active {
+        display: block;
+      }
     }
   }
 
@@ -484,7 +537,8 @@ body {
     padding: 50px;
 
     @include respond-to(xs) {
-      padding: 50px 20px 20px 0;
+      justify-content: center;
+      padding: 50px 0 20px 0;
     }
 
     @include respond-to(sm) {
@@ -494,6 +548,11 @@ body {
     h1 {
       font-family: $opensans;
       font-size: 30px;
+
+      @include respond-to(xs) {
+        text-align: center;
+        font-size: 25px;
+      }
 
       @include respond-to(sm) {
         flex-basis: 100%;
@@ -565,6 +624,10 @@ body {
   }
 }
 
+.icon-hover {
+  filter: opacity(0.6) grayscale(100%);
+}
+
 .card-title_hover {
   color: gray !important;
   transition: all ease-in-out .5s;
@@ -583,9 +646,8 @@ body {
   }
 
   .icon-control_hover {
-    @extend .icon;
-    background-image: url('../img/control_hover.png');
-    background-size: 85%;
+    @extend .icon-control;
+    filter: opacity(0.6) grayscale(100%);
   }
 }
 
@@ -602,9 +664,10 @@ body {
   }
 
   .icon-blog_hover {
-    @extend .icon;
-    background-image: url('../img/blog_hover.png');
-    background-size: 70%;
+    @extend .icon-blog;
+    // background-image: url('../img/blog_hover.png');
+    // background-size: 70%;
+    filter: opacity(0.6) grayscale(100%);
   }
 }
 
@@ -621,9 +684,10 @@ body {
   }
 
   .icon-gallery_hover {
-    @extend .icon;
-    background-image: url('../img/galeria_hover.png');
-    background-size: 90%;
+    @extend .icon-gallery;
+    // background-image: url('../img/galeria_hover.png');
+    // background-size: 90%;
+    filter: opacity(0.6) grayscale(100%);
   }
 }
 
@@ -640,9 +704,10 @@ body {
   }
 
   .icon-create_hover {
-    @extend .icon;
-    background-image: url('../img/crea_hover.png');
-    background-size: 75%;
+    @extend .icon-create;
+    // background-image: url('../img/crea_hover.png');
+    // background-size: 75%;
+    filter: opacity(0.6) grayscale(100%);
   }
 }
 
@@ -764,7 +829,7 @@ body {
 }
 
 .g-recaptcha {
-  transform: scale(.7) translateX(-20%);
+  transform: scale(.7);
 }
 
 footer {
@@ -778,7 +843,7 @@ footer {
     align-items: center;
     display: flex;
     justify-content: space-around;
-    padding: 25px 0;
+    padding: 30px 0 25px 0;
 
     @include respond-to(xs) {
       flex-wrap: wrap;

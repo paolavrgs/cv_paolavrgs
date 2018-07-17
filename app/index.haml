@@ -20,13 +20,13 @@
       #navbarNav.collapse.navbar-collapse
         %ul.navbar-nav
           %li.nav-item
-            %a.nav-link{:href => "#"} Features
+            %a.nav-link{:href => "#features"} Features
           %li.nav-item
-            %a.nav-link{:href => "#"} Producto
+            %a.nav-link{:href => "/#products"} Producto
           %li.nav-item
-            %a.nav-link{:href => "#"} About
+            %a.nav-link{:href => "/#about"} About
           %li.nav-item
-            %a.nav-link{:href => "#"} Contacto
+            %a.nav-link{:href => "/#kepplercontact"} Contacto
     // Home
     %section#home
       #particle-container
@@ -38,6 +38,10 @@
           %br contenidos en tu web
         %button.btn.cta{href:"#"} Iniciar proyecto
         %button.sandbox{href:"#"} Comienza con una muestra
+      .rocket
+        %img{src:"assets/img/cohete.svg", alt:""}
+      .clouds
+        %img{src:"assets/img/nubes.svg", alt:""}
     // Features
     %section#features.pad-section.d-none.d-md-block
       .container
@@ -47,10 +51,19 @@
         .row
           .col-md-8.offset-2
             .feature-img
-              %img{src:"assets/img/keppler_screen.png", alt:""}
+              %img.red.active{src:"assets/img/keppler_screen.png", alt:""}
+            .feature-img
+              %img.light-blue{src:"https://images.unsplash.com/photo-1531210488748-d1620f6506a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2789589eeaf861e53a2e05c716250b7a&auto=format&fit=crop&w=1050&q=80", alt:""}
+            .feature-img
+              %img.dark-blue{src:"https://images.unsplash.com/photo-1531199250311-f5755dcc55c5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4e3dbc5ec5bf998459018748937df203&auto=format&fit=crop&w=1050&q=80", alt:""}
+            .feature-img
+              %img.dark-red{src:"https://images.unsplash.com/photo-1531228040767-7a99c3ff4489?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=136f18f5c843c1f8a1e60eaeac6cffb5&auto=format&fit=crop&w=500&q=60", alt:""}
           .col-lg-8.offset-lg-2.col-md-12
             .feature-text
-              %span Haz que tu negocio tradicional se ajuste a las nuevas formas de vender
+              %span.red.active Haz que tu negocio tradicional se ajuste a las nuevas formas de vender
+              %span.light-blue manejo cosmico texto
+              %span.dark-red control texto
+              %span.dark-blue usabilidad texto
             .feature-icons
               %ul
                 %li
@@ -226,9 +239,9 @@
             .form-group
               %textarea.form-control{placeholder:"Mensaje"}
             .row
-              .col-lg-6
+              .col-lg-12.flex-captcha-btn
                 .g-recaptcha.float-left{"data-sitekey" => "6Lc5tGIUAAAAABQX9d_EDkF__xNc3MOYAzr9ptNd"}
-              .col-lg-6
+              .col-lg-12.flex-captcha-btn
                 %button.btn.send-btn.float-right Enviar
     %footer
       .container
@@ -247,10 +260,12 @@
               %li
                 %a{href:"#"}
                   %i.fab.fa-whatsapp
-            %span 
-              &copy; Desarrollado por
-              %a{href:"#"} Slice Group
-    %script{src: "https://code.jquery.com/jquery-3.3.1.slim.min.js"}
+            %ul.social-media
+              %li
+                %span 
+                  &copy; Desarrollado por
+                  %a{href:"#"} Slice Group
+    %script{src: "https://code.jquery.com/jquery-3.3.1.min.js"}
     %script{src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"}
     %script{src: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"}
     %script{src: "https://www.google.com/recaptcha/api.js"}

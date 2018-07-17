@@ -21,16 +21,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#features">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Producto</a>
+          <a class="nav-link" href="/#products">Producto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" href="/#kepplercontact">Contacto</a>
         </li>
       </ul>
     </div>
@@ -76,6 +76,12 @@
       <button class="btn cta" href="#">Iniciar proyecto</button>
       <button class="sandbox" href="#">Comienza con una muestra</button>
     </div>
+    <div class="rocket">
+      <img alt="" src="assets/img/cohete.svg">
+    </div>
+    <div class="clouds">
+      <img alt="" src="assets/img/nubes.svg">
+    </div>
   </section>
   <!-- / Features -->
   <section class="pad-section d-none d-md-block" id="features">
@@ -87,12 +93,24 @@
       <div class="row">
         <div class="col-md-8 offset-2">
           <div class="feature-img">
-            <img alt="" src="assets/img/keppler_screen.png">
+            <img alt="" class="red active" src="assets/img/keppler_screen.png">
+          </div>
+          <div class="feature-img">
+            <img alt="" class="light-blue" src="https://images.unsplash.com/photo-1531210488748-d1620f6506a5?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=2789589eeaf861e53a2e05c716250b7a&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80">
+          </div>
+          <div class="feature-img">
+            <img alt="" class="dark-blue" src="https://images.unsplash.com/photo-1531199250311-f5755dcc55c5?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=4e3dbc5ec5bf998459018748937df203&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80">
+          </div>
+          <div class="feature-img">
+            <img alt="" class="dark-red" src="https://images.unsplash.com/photo-1531228040767-7a99c3ff4489?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=136f18f5c843c1f8a1e60eaeac6cffb5&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60">
           </div>
         </div>
         <div class="col-lg-8 offset-lg-2 col-md-12">
           <div class="feature-text">
-            <span>Haz que tu negocio tradicional se ajuste a las nuevas formas de vender</span>
+            <span class="red active">Haz que tu negocio tradicional se ajuste a las nuevas formas de vender</span>
+            <span class="light-blue">manejo cosmico texto</span>
+            <span class="dark-red">control texto</span>
+            <span class="dark-blue">usabilidad texto</span>
           </div>
           <div class="feature-icons">
             <ul>
@@ -360,10 +378,10 @@
             <textarea class="form-control" placeholder="Mensaje"></textarea>
           </div>
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12 flex-captcha-btn">
               <div class="g-recaptcha float-left" data-sitekey="6Lc5tGIUAAAAABQX9d_EDkF__xNc3MOYAzr9ptNd"></div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12 flex-captcha-btn">
               <button class="btn send-btn float-right">Enviar</button>
             </div>
           </div>
@@ -397,15 +415,19 @@
 </a>
             </li>
           </ul>
-          <span>
+          <ul class="social-media">
+            <li>
+              <span>
 &copy; Desarrollado por
 <a href="#">Slice Group</a>
 </span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
