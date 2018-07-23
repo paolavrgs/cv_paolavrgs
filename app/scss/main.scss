@@ -58,6 +58,7 @@ body {
   .products {
     @extend %title-style;
     color: $white;
+    margin-bottom: 50px;
   }
 
   .about {
@@ -137,11 +138,11 @@ body {
 
 .cta-product {
   background-color: transparent;
-  border: 1px solid $white;
+  border: 2px solid $white;
   border-radius: 25px;
   color: $white;
   font-family: $opensans;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: .3px;
   margin: 30px 0;
@@ -174,7 +175,7 @@ body {
   color: $white;
   cursor: pointer;
   font-family: 'Open Sans';
-  font-size: 13px;
+  font-size: 15px;
   margin-left: 10px;
   text-decoration: underline;
 }
@@ -191,7 +192,6 @@ body {
   margin: 30px 0;
   padding: 18px 32px;
   transition: all ease-in-out .5s;
-  width: 81%;
 
   &:hover {
     box-shadow: 0 15px 37px rgba(50, 50, 93, .2), 0 5px 17px rgba(0, 0, 0, .08);
@@ -202,6 +202,7 @@ body {
 
 .btn-sandbox-footer {
   background-color: $white;
+  border: 2px solid transparent;
   border-radius: 25px;
   box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   color: $dark-red;
@@ -214,7 +215,7 @@ body {
   transition: all ease-in-out .5s;
 
   &:hover {
-    border: 1px solid $dark-red;
+    border: 2px solid $dark-red;
     transform: translateY(-2px);
     transition: all ease-in-out .5s;
     box-shadow: 0 15px 37px rgba(50, 50, 93, .2), 0 5px 17px rgba(0, 0, 0, .08);
@@ -225,7 +226,7 @@ body {
   @extend .cta;
   font-size: 15px;
   margin: 5px 0;
-  padding: 8px 28px;
+  padding: 10px 40px;
 }
 
 .flex-captcha-btn {
@@ -270,6 +271,28 @@ body {
     font-family: $opensans;
     font-size: 15px;
     transition: all ease-in-out .3s;
+    position: relative;
+
+    &:after {
+      background-color: transparent;
+      bottom: 3px;
+      content: '';
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      transition: width ease-in-out .5s;
+      width: 0%;
+    }
+
+    &:hover {
+
+      &:after {
+        background-color: $keppler-main;
+        transition: width ease-in-out .5s;
+        width: 35%;
+      }
+    }
   }
 }
 
@@ -366,13 +389,18 @@ body {
 
   .feature-img {
     margin: 30px 0;
+    position: relative;
 
     img {
-      height: auto;
-      width: 100%;
       display: none;
+      height: auto;
+      opacity: 0;
+      transition: opacity ease-in-out .3s;
+      width: 100%;
       &.active {
         display: block;
+        opacity: 1;
+        transition: opacity ease-in-out .3s;
       }
     }
   }
@@ -383,13 +411,27 @@ body {
     margin-bottom: 30px;
 
     span {
-      color: $subtitles;
+      color: $white;
+      border-radius: 18px;
       display: none;
       font-family: $opensans;
       font-size: 15px;
+      padding: 5px 15px;
       text-align: center;
       &.active {
         display: block;
+      }
+      &.red {
+        background-color: $keppler-main;
+      }
+      &.dark-red {
+        background-color: $dark-red;
+      }
+      &.light-blue {
+        background-color: $light-blue;
+      }
+      &.dark-blue {
+        background-color: $dark-blue;
       }
     }
   }
@@ -534,7 +576,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    padding: 50px;
+    padding-left: 30px;
 
     @include respond-to(xs) {
       justify-content: center;
@@ -547,7 +589,7 @@ body {
 
     h1 {
       font-family: $opensans;
-      font-size: 30px;
+      font-size: 35px;
 
       @include respond-to(xs) {
         text-align: center;
@@ -712,6 +754,10 @@ body {
 }
 
 //footer
+#cta-footer {
+  padding: 0 0 70px 0;
+}
+
 .cta-footer {
   align-items: center;
   display: flex;
@@ -742,7 +788,9 @@ body {
     span {
       color: $subtitles;
       font-family: $opensans;
-      font-size: 15px;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
     }
   }
 }
@@ -776,7 +824,9 @@ body {
     span {
       color: $subtitles;
       font-family: $opensans;
-      font-size: 15px;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
     }
   }
 }
@@ -862,9 +912,45 @@ footer {
       list-style: none;
       margin: 0 10px;
 
+      &:hover {
+        
+        a {
+          text-decoration: none;
+        }
+
+        #ws {
+          i {
+            color: #25d366;
+            transition: all ease-in-out .5s;
+          }
+        }
+        
+        #ig {
+          i {
+            color: #cd486b;
+            transition: all ease-in-out .5s;
+          }
+        }
+        
+        #fb {
+          i {
+            color: #3b5998;
+            transition: all ease-in-out .5s;
+          }
+        }
+        
+        #ld {
+          i {
+            color: #0077b5;
+            transition: all ease-in-out .5s;
+          }
+        }
+      }
+
       a i {
         color: $main-black;
         font-size: 20px;
+        transition: all ease-in-out .5s;
 
         @include respond-to(xs) {
           font-size: 15px;
@@ -882,7 +968,8 @@ footer {
       color: $subtitles;
 
       &:hover {
-        color: $subtitles;
+        color:#363030;
+        text-decoration: underline;
       }
     }
   }
