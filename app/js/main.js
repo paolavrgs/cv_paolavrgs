@@ -1,4 +1,4 @@
-// ABOUT HOVER
+// ===== About cards - hover =====
 $('.about-card').hover(
   function(){
     $('.about-card').addClass('icon-hover');
@@ -9,7 +9,7 @@ $('.about-card').hover(
   }
 );
 
-//FEATURES HOVER
+// ===== Features - hover =====
 $('.icon-circle').hover(
   function(){
     $('.icon-circle').addClass('feature_gray');
@@ -24,7 +24,7 @@ $('.icon-circle').hover(
   }
 );
 
-// SLIDERS
+// ===== Features - Slider =====
 $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -41,6 +41,7 @@ $('.slider-nav').slick({
   focusOnSelect: true
 });
 
+// ===== Scroll links =====
 $("a").click(function(event) {
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
@@ -76,7 +77,7 @@ $('#return-to-top').click(function() {      // When arrow is clicked
   }, 500);
 });
 
-
+// ===== Home - Particles effect =====
 function particles() {
   $.each($(".particles"), function(){
      var bubblecount = ($(this).width()/50)*6;
@@ -94,3 +95,18 @@ jQuery.rnd = function(m,n) {
 }
 
 particles();
+
+// ==== Change of img home ====
+function cloudImage(){
+  if ($(window).width() < 525) {
+    $("#clouds").attr('src', 'assets/img/nubes_new_mobile.svg');
+  } else {
+    $("#clouds").attr('src', 'assets/img/nubes_new.svg');
+  }
+}
+
+$(document).ready(function(){
+  cloudImage()
+})
+
+window.onresize = cloudImage;

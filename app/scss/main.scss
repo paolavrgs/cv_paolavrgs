@@ -9,22 +9,6 @@ body {
 
 // Main Styles
 
-#particles-js {
-  position: absolute;
-
-  @include respond-to(xs) {
-    display: none;
-  }
-
-  @include respond-to(sm) {
-    display: none;
-  }
-
-  @include respond-to(md) {
-    height: 65%;
-  }
-}
-
 .section-title {
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +70,7 @@ body {
 }
 
 .pad-section {
-  padding: 50px 0;
+  padding: 70px 0;
 }
 
 .flex-box {
@@ -117,7 +101,7 @@ body {
 
 //Buttons
 .cta {
-  background-color: $dark-red;
+  background-color: $keppler-main;
   border-radius: 25px;
   color: $white;
   font-family: $opensans;
@@ -127,14 +111,14 @@ body {
   margin: 30px 0;
   padding: 15px 35px;
   transition: all ease-in-out .3s;
-  z-index: 1;
+  z-index: 2;
 
   @include respond-to(xs) {
     padding: 15px 30px;
   }
 
   &:hover {
-    // background-color: $dark-red;
+    background-color: $dark-red;
     transition: all ease-in-out .3s;
   }
 
@@ -155,7 +139,7 @@ body {
 
   &:hover {
     background-color: $white;
-    color: $dark-red;
+    color: $keppler-main;
   }
 }
 
@@ -168,6 +152,7 @@ body {
   font-size: 15px;
   margin-left: 20px;
   text-decoration: underline;
+  z-index: 2;
 
   @include respond-to(xs) {
     margin-left: 0;
@@ -186,7 +171,7 @@ body {
 }
 
 .btn-cta-footer {
-  background-color: $dark-red;
+  background-color: $keppler-main;
   border-radius: 25px;
   box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   color: $white;
@@ -214,7 +199,7 @@ body {
   border: 2px solid transparent;
   border-radius: 25px;
   box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
-  color: $dark-red;
+  color: $keppler-main;
   font-family: $opensans;
   font-size: 15px;
   font-weight: 700;
@@ -228,7 +213,7 @@ body {
   }
 
   &:hover {
-    border: 2px solid $dark-red;
+    border: 2px solid $keppler-main;
     transform: translateY(-2px);
     transition: all ease-in-out .5s;
     box-shadow: 0 15px 37px rgba(50, 50, 93, .2), 0 5px 17px rgba(0, 0, 0, .08);
@@ -343,17 +328,22 @@ body {
   }
 
   &:hover {
-    color: $main-black;
+    color: $keppler-main;
   }
 
   &.active {
     font-weight: 600;
   }
+
+  @include respond-to(xs) {
+    &:last-child {
+      padding: .5rem 0 .5rem 1rem;
+    }
+  }
 }
 
 // Home
 #home {
-  // background-image: url('../img/Cohete_nubes_new.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -361,9 +351,17 @@ body {
   position: relative;
   width: 100%;
 
+  @include respond-to(xs) {
+    height: 100vh;
+  }
+
   .rocket {
     height: 100%;
     width: 100%;
+
+    @include respond-to(xs) {
+      display: none;
+    }
 
     img {
       position: absolute;
@@ -384,6 +382,13 @@ body {
       position: absolute;
       width: 100%;
       z-index: 1;
+
+      @include respond-to(xs) {
+        bottom: -10px;
+      }
+      @include respond-to(sm) {
+        bottom: 10%;
+      }
     }
   }
 
@@ -450,12 +455,12 @@ body {
       display: none;
       height: auto;
       opacity: 0;
-      transition: opacity ease-in-out .3s;
+      transition: opacity ease-in-out .2s;
       width: 100%;
       &.active {
         display: block;
         opacity: 1;
-        transition: opacity ease-in-out .3s;
+        transition: opacity ease-in-out .2s;
       }
     }
   }
@@ -463,10 +468,10 @@ body {
   .feature-text {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     span {
-      color: $white;
+      color: $main-black;
       border-radius: 18px;
       display: none;
       font-family: $opensans;
@@ -475,18 +480,6 @@ body {
       text-align: center;
       &.active {
         display: block;
-      }
-      &.red {
-        background-color: $keppler-main;
-      }
-      &.dark-red {
-        background-color: $dark-red;
-      }
-      &.light-blue {
-        background-color: $light-blue;
-      }
-      &.dark-blue {
-        background-color: $dark-blue;
       }
     }
   }
@@ -510,7 +503,7 @@ body {
           display: flex;
           height: 70px;
           justify-content: center;
-          transition: all ease-in-out .5s;
+          transition: all ease-in-out .2s;
           width: 70px;
 
           img {
@@ -528,7 +521,7 @@ body {
         }
       }
 
-      .feature_gray { background-color: gray !important; transition: all ease-in-out .5s; }
+      .feature_gray { background-color: gray !important; transition: all ease-in-out .2s; }
       #red { background-color: $keppler-main; }
       #light-blue { background-color: $light-blue; }
       #dark-red { background-color: $dark-red; }
@@ -737,7 +730,7 @@ body {
   }
 
   h1 {
-    color: $dark-red;
+    color: $keppler-main;
     transition: all ease-in-out .5s;
   }
 
@@ -1034,7 +1027,7 @@ footer {
 
 
 #return-to-top {
-  background-color: $dark-red;
+  background-color: $keppler-main;
   border-radius: 35px;
   bottom: 20px;
   box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
@@ -1047,6 +1040,7 @@ footer {
   width: 50px;
   z-index: 9;
 }
+
 #return-to-top i {
   color: #fff;
   font-size: 19px;
@@ -1056,6 +1050,11 @@ footer {
   top: 13px;
   transition: all 0.3s ease;
 }
-#return-to-top:hover i {
-  top: 10px;
-}
+
+#return-to-top:hover {
+  background-color: $dark-red;
+  
+  i {
+    top: 10px;
+  }
+} 

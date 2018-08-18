@@ -15,10 +15,12 @@
   }
   20% { //show and hint at moving
      opacity: 1;
-     transform:translate(0, -50%);
+     transform:translate(0, -50%); // Bottom to top
+    //  transform:translate(0, 50%); // Top to bottom
   }
   100% {
      opacity: 0;
-     transform:translate(0, -1000%); //Big bubbles move faster
+     transform:translate(0, -1000%); // Bottom to top
+    //  transform:translate(0, 1000%); Top to botton
   }
 }
