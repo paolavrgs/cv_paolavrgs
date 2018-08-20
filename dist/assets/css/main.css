@@ -754,6 +754,12 @@ body {
   padding: 15px 35px;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  #about .about-card .about-content {
+    padding: 10px;
+  }
+}
+
 #about .about-card h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;

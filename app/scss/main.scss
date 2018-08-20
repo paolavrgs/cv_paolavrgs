@@ -680,6 +680,10 @@ body {
 
     .about-content {
       padding: 15px 35px;
+
+       @include respond-to(xs) {
+         padding: 10px;
+       }
     }
 
     h1 {
