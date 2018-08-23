@@ -58,38 +58,35 @@
           %span.subtitle Gestiona tú mismo todo el contenido de manera fácil
         .row
           .col-md-8.offset-2
-            .feature-img
-              %img.red.active{src:"https://images.unsplash.com/photo-1531199250311-f5755dcc55c5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4e3dbc5ec5bf998459018748937df203&auto=format&fit=crop&w=1050&q=80", alt:""}
-            .feature-img
-              %img.light-blue{src:"https://images.unsplash.com/photo-1531210488748-d1620f6506a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2789589eeaf861e53a2e05c716250b7a&auto=format&fit=crop&w=1050&q=80", alt:""}
-            .feature-img
-              %img.dark-blue{src:"https://images.unsplash.com/photo-1531199250311-f5755dcc55c5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4e3dbc5ec5bf998459018748937df203&auto=format&fit=crop&w=1050&q=80", alt:""}
-            .feature-img
-              %img.dark-red{src:"https://images.unsplash.com/photo-1531228040767-7a99c3ff4489?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=136f18f5c843c1f8a1e60eaeac6cffb5&auto=format&fit=crop&w=500&q=60", alt:""}
+            .features-images
+              .feature-img
+                %img.red.active{src:"https://images.unsplash.com/photo-1531199250311-f5755dcc55c5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4e3dbc5ec5bf998459018748937df203&auto=format&fit=crop&w=1050&q=80", alt:""}
+              .feature-img
+                %img.light-blue{src:"https://images.unsplash.com/photo-1531210488748-d1620f6506a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2789589eeaf861e53a2e05c716250b7a&auto=format&fit=crop&w=1050&q=80", alt:""}
+              .feature-img
+                %img.dark-blue{src:"https://images.unsplash.com/photo-1531199250311-f5755dcc55c5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4e3dbc5ec5bf998459018748937df203&auto=format&fit=crop&w=1050&q=80", alt:""}
+              .feature-img
+                %img.dark-red{src:"https://images.unsplash.com/photo-1531228040767-7a99c3ff4489?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=136f18f5c843c1f8a1e60eaeac6cffb5&auto=format&fit=crop&w=500&q=60", alt:""}
           .col-lg-8.offset-lg-2.col-md-12.sticky-icons
+            .feature-icons
+              %ul
+                %li
+                  %span.feature-btn.feature-active#red
+                    Adaptabilidad
+                %li
+                  %span.feature-btn#light-blue
+                    Manejo Cósmico
+                %li
+                  %span.feature-btn#dark-red
+                    Control y Escabilidad
+                %li
+                  %span.feature-btn#dark-blue
+                    Usabilidad y evolución
             .feature-text
               %span.red.active Haz que tu negocio tradicional se ajuste a las nuevas formas de vender.
               %span.light-blue Tan sencillo de usar que podrás realizar cambios desde tu teléfono sin complicaciones.
               %span.dark-red Controla de la mejor forma, la información que provean tus usuarios para que tu empresa alcance los objetivos.
               %span.dark-blue Tu web se visualiza en cualquier plataforma y puede ser modificada sin empezar de cero.
-            .feature-icons
-              %ul
-                %li
-                  .icon-circle#red
-                    %img{src:"assets/img/adaptabilidad_icon.png"}
-                  %span Adaptabilidad
-                %li
-                  .icon-circle#light-blue
-                    %img{src:"assets/img/cosmico_icon.png"}
-                  %span Manejo Cósmico
-                %li
-                  .icon-circle#dark-red
-                    %img{src:"assets/img/control_icon.png"}
-                  %span Control y Escabilidad
-                %li
-                  .icon-circle#dark-blue
-                    %img{src:"assets/img/evolucion_icon.png"}
-                  %span Usabilidad y evolución
     // Features - Slider
     %section#features-xs.pad-section.d-md-none
       .container

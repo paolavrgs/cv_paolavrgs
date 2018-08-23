@@ -10,17 +10,17 @@ $('.about-card').hover(
 );
 
 // ===== Features - hover =====
-$('.icon-circle').hover(
+$('.feature-btn').hover(
   function(){
-    $('.icon-circle').addClass('feature_gray');
-    $(this).removeClass('feature_gray');
+    $('.feature-btn').removeClass('feature-active');
+    $(this).addClass('feature-active');
 
     var id = $(this).prop('id');
     $('.feature-img img, .feature-text span').removeClass('active')
     $('.' + id).addClass('active')
   },
   function(){
-    $('.icon-circle').removeClass('feature_gray');
+    $('.feature-btn').removeClass('feature-disabled');
   }
 );
 
@@ -82,8 +82,8 @@ function particles() {
   $.each($(".particles"), function(){
      var bubblecount = ($(this).width()/50)*6;
      for(var i = 0; i <= bubblecount; i++) {
-        var size = ($.rnd(30,40)/10);
-        $(this).append('<span class="particle" style="top:' + $.rnd(5,90) + '%; left:' + $.rnd(0,95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,30)/10) + 's;"></span>');
+        var size = ($.rnd(20,30)/10);
+        $(this).append('<span class="particle" style="top:' + $.rnd(2,90) + '%; left:' + $.rnd(0,95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,30)/10) + 's;"></span>');
      }
   });
 }
