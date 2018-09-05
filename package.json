@@ -33,6 +33,7 @@
     "run-sequence": "^2.2.0"
   },
   "dependencies": {
+    "gulp-install": "^1.1.0",
     "gulp-ruby-haml": "0.0.9"
   }
 }

@@ -492,7 +492,7 @@ body {
 
 .features-images {
   position: relative;
-  height: 400px;
+  height: 500px;
   margin: 30px 0;
 }
 
@@ -505,7 +505,7 @@ body {
 .feature-img img {
   height: 100%;
   opacity: 0;
-  object-fit: cover;
+  object-fit: contain;
   transition: opacity ease-in-out .2s;
   width: 100%;
 }
@@ -574,70 +574,43 @@ body {
   color: #fff !important;
 }
 
-#features-xs {
+.features-images-xs {
+  height: 250px;
+}
+
+.features-images-xs .feature-img-xs {
+  position: absolute;
+  height: 100%;
   width: 100%;
 }
 
-#features-xs .feature-img {
-  margin: 30px 0;
-}
-
-#features-xs .feature-img img {
-  height: auto;
+.features-images-xs .feature-img-xs img {
+  height: 100%;
+  object-fit: contain;
+  transition: opacity ease-in-out .2s;
   width: 100%;
 }
 
-#features-xs .feature-icons-xs li {
+.feature-icons-xs .feature-btn-xs {
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-#features-xs .feature-icons-xs li .icon-circle {
-  align-items: center;
-  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #DA291C !important;
+  border-radius: 20px;
+  color: #DA291C;
   cursor: pointer;
   display: flex;
-  height: 70px;
-  justify-content: center;
-  width: 70px;
-}
-
-#features-xs .feature-icons-xs li .icon-circle img {
-  height: 30px;
-  object-fit: contain;
-  width: 30px;
-}
-
-#features-xs .feature-icons-xs li span {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 700;
-  margin-top: 10px;
-}
-
-#features-xs .feature-icons-xs li p {
-  font-family: 'Open Sans';
-  font-size: 15px;
+  justify-content: center;
+  margin: 20px;
+  padding: 5px 15px;
+  transition: all ease-in-out .2s;
   text-align: center;
 }
 
-#features-xs .feature-icons-xs #red {
-  background-color: #DA291C;
-}
-
-#features-xs .feature-icons-xs #light-blue {
-  background-color: #009CDE;
-}
-
-#features-xs .feature-icons-xs #dark-red {
-  background-color: #BC1E1B;
-}
-
-#features-xs .feature-icons-xs #dark-blue {
-  background-color: #00629B;
+.feature-icons-xs p {
+  text-align: center;
 }
 
 .slick-dots {

@@ -12,9 +12,10 @@
 
 .features-images {
   position: relative;
-  height: 400px;
+  height: 500px;
   margin: 30px 0;
 }
+
 .feature-img {
   position: absolute;
   height: 100%;
@@ -23,7 +24,7 @@
   img {
     height: 100%;
     opacity: 0;
-    object-fit: cover;
+    object-fit: contain;
     transition: opacity ease-in-out .2s;
     width: 100%;
     &.active {
@@ -90,5 +91,48 @@
       box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
       color: $white !important;
     }
+  }
+}
+
+// Features - Slider
+.features-images-xs {
+  height: 250px;
+  
+  .feature-img-xs {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  
+    img {
+      height: 100%;
+      object-fit: contain;
+      transition: opacity ease-in-out .2s;
+      width: 100%;
+    }
+  }
+}
+
+.feature-icons-xs {
+
+  .feature-btn-xs {
+    align-items: center;
+    background-color: $white;
+    border: 1px solid $keppler-main !important;
+    border-radius: 20px;
+    color: $keppler-main;
+    cursor: pointer;
+    display: flex;
+    font-family: $opensans;
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: center;
+    margin: 20px;
+    padding: 5px 15px;
+    transition: all ease-in-out .2s; 
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
   }
 }
