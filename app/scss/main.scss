@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 
-// Main Styles
+// Main
 
 .section-title {
   display: flex;
@@ -173,7 +173,7 @@ body {
 .btn-cta-footer {
   background-color: $keppler-main;
   border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
   color: $white;
   font-family: $opensans;
   font-size: 15px;
@@ -184,7 +184,7 @@ body {
   transition: all ease-in-out .5s;
 
   @include respond-to(xs) {
-    margin: 20px 0 30px 0;
+    margin: 20px 0 30px;
   }
 
   &:hover {
@@ -198,7 +198,7 @@ body {
   background-color: $white;
   border: 2px solid transparent;
   border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
   color: $keppler-main;
   font-family: $opensans;
   font-size: 15px;
@@ -240,17 +240,17 @@ body {
   z-index: 9;
 
   @include respond-to(xs) {
-    padding-left: 1rem;
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    padding-left: 1rem;
+    width: 100%;
   }
 
   @include respond-to(sm) {
-    padding-left: 40px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    padding-left: 40px;
+    width: 100%;
   }
 
   .navbar-brand {
@@ -261,12 +261,12 @@ body {
 
   .nav-item {
     padding: 0 15px;
+  }
 
-    &:hover {
+  .nav-item:hover {
 
-      .nav-link {
-        transition: all ease-in-out .3s;
-      }
+    .nav-link {
+      transition: all ease-in-out .3s;
     }
   }
 
@@ -274,21 +274,21 @@ body {
     color: $white;
     font-family: $opensans;
     font-size: 15px;
-    transition: all ease-in-out .3s;
     position: relative;
+    transition: all ease-in-out .3s;
+  }
 
-    &:hover {
+  .nav-link:hover {
 
-      &:after {
-        background-color: $keppler-main;
-        transition: width ease-in-out .5s;
-        width: 35%;
-      }
+    &::after {
+      background-color: $keppler-main;
+      transition: width ease-in-out .5s;
+      width: 35%;
     }
   }
 
   .nav-link-hover {
-    &:after {
+    &::after {
       background-color: transparent;
       bottom: 3px;
       content: '';
@@ -303,8 +303,8 @@ body {
 }
 
 .lang-xs {
-  padding-left: 0;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
 .languages {
@@ -315,6 +315,12 @@ body {
   padding: .5rem 1rem;
   position: relative;
   transition: all ease-in-out .3s;
+
+  @include respond-to(xs) {
+    &:last-child {
+      padding: .5rem 0 .5rem 1rem;
+    }
+  }
 
   &:first-child::after {
     background-color: $white;
@@ -332,12 +338,6 @@ body {
 
   &.active {
     font-weight: 600;
-  }
-
-  @include respond-to(xs) {
-    &:last-child {
-      padding: .5rem 0 .5rem 1rem;
-    }
   }
 }
 
@@ -363,9 +363,9 @@ body {
     }
 
     img {
+      bottom: 9%;
       position: absolute;
       right: 19%;
-      bottom: 9%;
       width: 18%;
       z-index: 2;
 
@@ -385,15 +385,20 @@ body {
       @include respond-to(xs) {
         bottom: -10px;
       }
+
       @include respond-to(sm) {
-        bottom: 10%;
+        bottom: 12%;
+      }
+
+      @include respond-to(md) {
+        bottom: 8%;
       }
     }
   }
 
   .mask-home {
     align-content: center;
-    background: linear-gradient(to bottom, rgba(51,51,102,1) 0%, rgba(36,45,75,1) 51%, rgba(30,43,64,1) 100%);
+    background: $blue-gradient;
     display: flex;
     flex-wrap: wrap;
     height: 80%;
@@ -402,9 +407,9 @@ body {
     width: 100%;
 
     @include respond-to(xs) {
+      height: 100%;
       justify-content: center;
       padding-left: 0;
-      height: 100%;
     }
 
     @include respond-to(sm) {
@@ -421,8 +426,9 @@ body {
 
       @include respond-to(xs) {
         font-size: 30px;
-        margin: 0px 20px;
+        margin: 0 20px;
         text-align: center;
+
         br {
           display: none;
         }
@@ -435,15 +441,18 @@ body {
   }
 }
 
-@import 'components';
+@import 'features';
 
 // Slick dots - Custom for features slider
 .slick-dots {
   display: inline-flex;
   justify-content: center;
   position: relative;
+
   li {
+
     button {
+
       &::before {
         font-size: 25px;
        }
@@ -484,18 +493,19 @@ body {
       font-size: 35px;
 
       @include respond-to(xs) {
-        text-align: center;
         font-size: 25px;
+        text-align: center;
       }
 
       @include respond-to(sm) {
-        text-align: center;
         flex-basis: 100%;
+        text-align: center;
       }
     }
 
     .call-to-actions {
       display: flex;
+
       @media only screen and (max-width:410px) and (min-width:0) {
         flex-direction: column;
       }
@@ -507,9 +517,9 @@ body {
 #about {
   .about-card {
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: $about-bg;
     border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
     display: flex;
     height: 250px;
     margin: 0 5px 40px;
@@ -530,9 +540,9 @@ body {
     .about-content {
       padding: 15px 35px;
 
-       @include respond-to(xs) {
-         padding: 10px;
-       }
+      @include respond-to(xs) {
+        padding: 10px;
+      }
     }
 
     h1 {
@@ -567,7 +577,7 @@ body {
 }
 
 .icon-hover {
-  filter: opacity(0.6) grayscale(100%);
+  filter: opacity(.6) grayscale(100%);
 }
 
 .card-title_hover {
@@ -607,9 +617,7 @@ body {
 
   .icon-blog_hover {
     @extend .icon-blog;
-    // background-image: url('../img/blog_hover.png');
-    // background-size: 70%;
-    filter: opacity(0.6) grayscale(100%);
+    filter: opacity(.6) grayscale(100%);
   }
 }
 
@@ -627,9 +635,7 @@ body {
 
   .icon-gallery_hover {
     @extend .icon-gallery;
-    // background-image: url('../img/galeria_hover.png');
-    // background-size: 90%;
-    filter: opacity(0.6) grayscale(100%);
+    filter: opacity(.6) grayscale(100%);
   }
 }
 
@@ -647,15 +653,13 @@ body {
 
   .icon-create_hover {
     @extend .icon-create;
-    // background-image: url('../img/crea_hover.png');
-    // background-size: 75%;
-    filter: opacity(0.6) grayscale(100%);
+    filter: opacity(.6) grayscale(100%);
   }
 }
 
 //footer
-#cta-footer {
-  padding: 0 0 70px 0;
+.cta-footer-box {
+  padding: 0 0 70px;
 }
 
 .cta-footer {
@@ -678,8 +682,8 @@ body {
     padding-right: 20px;
 
     @include respond-to(xs) {
-      padding-right: 0;
       margin-bottom: 20px;
+      padding-right: 0;
     }
 
     @include respond-to(sm) {
@@ -690,8 +694,8 @@ body {
       color: $subtitles;
       font-family: $opensans;
       font-size: 15px;
-      padding: 0 15px;
       font-weight: 600;
+      padding: 0 15px;
       text-align: center;
     }
   }
@@ -727,15 +731,15 @@ body {
       color: $subtitles;
       font-family: $opensans;
       font-size: 15px;
-      padding: 0 15px;
       font-weight: 600;
+      padding: 0 15px;
       text-align: center;
     }
   }
 }
 
-#kepplercontact {
-  background-color: #F5F5F5;
+.contact {
+  background-color: $about-bg;
   background-image: url('../img/fondo_footer.png');
   background-position: bottom;
   background-repeat: no-repeat;
@@ -796,7 +800,7 @@ footer {
     align-items: center;
     display: flex;
     justify-content: space-around;
-    padding: 30px 0 25px 0;
+    padding: 30px 0 25px;
 
     @include respond-to(xs) {
       flex-wrap: wrap;
@@ -816,33 +820,36 @@ footer {
       margin: 0 10px;
 
       &:hover {
-        
+
         a {
           text-decoration: none;
         }
 
-        #ws {
+        .ws {
+
           i {
             color: #25d366;
             transition: all ease-in-out .5s;
           }
         }
-        
-        #ig {
+
+        .ig {
+
           i {
             color: #cd486b;
             transition: all ease-in-out .5s;
           }
         }
-        
-        #fb {
+
+        .fb {
+
           i {
             color: #3b5998;
             transition: all ease-in-out .5s;
           }
         }
-        
-        #ld {
+
+        .ld {
           i {
             color: #0077b5;
             transition: all ease-in-out .5s;
@@ -871,7 +878,7 @@ footer {
       color: $subtitles;
 
       &:hover {
-        color:#363030;
+        color: #363030;
         text-decoration: underline;
       }
     }
@@ -879,35 +886,37 @@ footer {
 }
 
 
-#return-to-top {
+.return-to-top {
   background-color: $keppler-main;
   border-radius: 35px;
   bottom: 20px;
-  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
   display: none;
   height: 50px;
   position: fixed;
   right: 20px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all .3s ease;
   width: 50px;
   z-index: 9;
-}
 
-#return-to-top i {
-  color: #fff;
-  font-size: 19px;
-  left: 16px;
-  margin: 0;
-  position: relative;
-  top: 13px;
-  transition: all 0.3s ease;
-}
+  &:hover {
+    background-color: $dark-red;
 
-#return-to-top:hover {
-  background-color: $dark-red;
-  
-  i {
-    top: 10px;
+    i {
+      top: 10px;
+    }
   }
-} 
+
+  i {
+    color: $white;
+    font-size: 19px;
+    left: 16px;
+    margin: 0;
+    position: relative;
+    top: 13px;
+    transition: all .3s ease;
+  }
+}
+
+

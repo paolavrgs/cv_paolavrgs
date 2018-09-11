@@ -1,0 +1,34 @@
+// Navigation
+%nav.navbar.navbar-expand-lg
+  %a.navbar-brand{ href: '#' } Keppler
+  %ul.lang-xs.d-lg-none
+    %li.flex-box
+      %a.languages.active{ href: '#' } ESP
+      %a.languages{ href: '#' } ENG
+  .collapse.navbar-collapse#navbar
+    %ul.navbar-nav
+      %li.nav-item
+        %a.nav-link.nav-link-hover{ href: '#features' } Características
+      %li.nav-item
+        %a.nav-link.nav-link-hover{ href: '/#products' } Producto
+      %li.nav-item
+        %a.nav-link.nav-link-hover{ href: '/#about' } Rockets de Despegue
+      %li.nav-item
+        %a.nav-link.nav-link-hover{ href: '/#kepplercontact' } Contacto
+      %li.nav-item.flex-box
+        %a.languages.active{ href: '#' } ESP
+        %a.languages{ href: '#' } ENG
+// Home
+%section#home
+  #particle-container
+    .particles
+  .mask-home
+    %h1
+      Crea y gestiona los
+      %br contenidos en tu web
+    %button.btn.cta{ href: '#' } Iniciar proyecto
+    %button.sandbox{ href: '#' } Comienza con una muestra
+  .rocket
+    %img{ src: 'assets/img/cohete_new2.svg', alt: '' }
+  .clouds
+    %img#clouds{ src: 'assets/img/nubes_new.svg', alt: '' }
