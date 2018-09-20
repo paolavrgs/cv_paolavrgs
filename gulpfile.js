@@ -74,7 +74,7 @@ gulp.task('add_materialize', function(){
 
 //Save cache and minify images
 gulp.task('images', function(){
-  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|m4v)')
   // Caching images that ran through imagemin
   .pipe(cache(imagemin({
       interlaced: true

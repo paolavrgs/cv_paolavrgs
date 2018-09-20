@@ -11,7 +11,9 @@
           .row
             .col-lg-7.col-xs-12
               .product-img
-                %img{ src: 'assets/img/apariencia.gif', style: 'width:100%;' }
+                %video{autoplay: "true", loop: "true", poster: ""}
+                  %source{ src: 'assets/img/apariencia.m4v', type: 'video/mp4' }
+                -# %img{ src: 'assets/img/apariencia.m4v', style: 'width:100%;' }
             .col-lg-5.col-xs-12
               .product-description
                 %h1
@@ -37,13 +39,17 @@
                     Comienza con una muestra
             .col-lg-7.col-xs-12.order-custom
               .product-img
-                %img{ src: 'assets/img/galeria.gif', style: 'width:100%;' }
+                %video{autoplay: "true", loop: "true", poster: ""}
+                  %source{ src: 'assets/img/galeria.mp4', type: 'video/mp4' }
+                -# %img{ src: 'assets/img/galeria.mp4', style: 'width:100%;' }
       .col-lg-12.padding-section
         .container
           .row
             .col-lg-7.col-xs-12
               .product-img
-                %img{ src: 'assets/img/blog.gif', style: 'width:100%;' }
+                %video{autoplay: "true", loop: "true", poster: ""}
+                  %source{ src: 'assets/img/blog.m4v', type: 'video/mp4' }
+                -# %img{ src: 'assets/img/blog.m4v', style: 'width:100%;' }
             .col-lg-5.col-xs-12
               .product-description
                 %h1

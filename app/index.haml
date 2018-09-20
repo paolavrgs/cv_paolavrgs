@@ -1,4 +1,8 @@
 !!!
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
 %html{ lang: 'en' }
   %head
     %meta{ charset: 'UTF-8' }

@@ -639,6 +639,10 @@ body {
   width: 100%;
 }
 
+#products .product-img video {
+  width: 100%;
+}
+
 #products .product-description {
   align-content: center;
   display: flex;
