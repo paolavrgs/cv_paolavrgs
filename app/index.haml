@@ -8,7 +8,7 @@
     %meta{ charset: 'UTF-8' }
     %meta{ content: 'width=device-width, initial-scale=1.0', name: 'viewport' }
     %meta{ name: 'theme-color', content: '#fff' }
-    %title Keppler | CMS
+    %title Crea tu sitio web con Keppler Admin hoy mismo
     %link{ rel: 'shortcut icon', href: 'assets/img/favicon.png' }
     %link{ rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css' }
     %link{ rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.1.0/css/all.css' }
@@ -20,11 +20,11 @@
     %a.return-to-top{ href: 'javascript:', id: 'return-to-top' }
       %i.fa.fa-chevron-up
 
-    = Haml::Engine.new(File.read('app/partials/_header.haml')).render
-    = Haml::Engine.new(File.read('app/partials/_features.haml')).render
-    = Haml::Engine.new(File.read('app/partials/_product.haml')).render
-    = Haml::Engine.new(File.read('app/partials/_about.haml')).render
-    = Haml::Engine.new(File.read('app/partials/_footer.haml')).render
+    = render('app/partials/_header.haml')
+    = render('app/partials/_features.haml')
+    = render('app/partials/_product.haml')
+    = render('app/partials/_about.haml')
+    = render('app/partials/_footer.haml')
 
     %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
     %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js' }
