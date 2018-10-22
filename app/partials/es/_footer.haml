@@ -1,0 +1,53 @@
+%section.cta-footer-box#cta-footer
+  .container
+    .row
+      .col-lg-6.cta-footer
+        .cta-footer-inner
+          %span Despeguemos tu empresa al siguiente nivel
+          %button.btn-cta-footer.btn Iniciemos el viaje
+      .col-lg-6.sandbox-footer
+        .sandbox-footer-inner
+          %span ¿Olvidaste ver cómo funciona Keppler?
+          %button.btn.btn-sandbox-footer Mira más de cerca
+%section.contact#kepplercontact
+  .container
+    .section-title
+      %h1.footer-title ¿Alguna duda?
+      %span.subtitle Contacta con nuestros ingenieros espaciales
+    %form.keppler-form
+      .col-lg-4.offset-lg-4
+        .form-group
+          %input.form-control{ placeholder: 'Nombre' }
+        .form-group
+          %input.form-control{ placeholder: 'Teléfono' }
+        .form-group
+          %input.form-control{ placeholder: 'Correo' }
+        .form-group
+          %textarea.form-control{ placeholder: 'Mensaje' }
+        .row
+          .col-lg-12.flex-captcha-btn
+            .g-recaptcha.float-left{ 'data-sitekey' => '6Lc5tGIUAAAAABQX9d_EDkF__xNc3MOYAzr9ptNd' }
+          .col-lg-12.flex-captcha-btn
+            %button.btn.send-btn.float-right Enviar
+%footer
+  .container
+    .row
+      .col-sm-10.offset-sm-1.flex-footer
+        %ul.social-media
+          %li
+            %a.ig{ href: 'http://instagram.com/slicegroupxyz', target: 'blank' }
+              %i.fab.fa-instagram
+          %li
+            %a.fb{ href: 'https://es-la.facebook.com/slicegroupxyz/', target: 'blank' }
+              %i.fab.fa-facebook-f
+          %li
+            %a.ld{ href: 'https://www.linkedin.com/company/slice-group/', target: 'blank' }
+              %i.fab.fa-linkedin-in
+          %li
+            %a.ws{ href: 'whatsapp://send?text=Hola, aqui va un mensaje;phone=+573003466868' }
+              %i.fab.fa-whatsapp
+        %ul.social-media
+          %li
+            %span
+              &copy; Keppler Admin es un producto de
+              %a{ href: 'http://slicegroup.xyz', target: 'blank' } Slice Group
