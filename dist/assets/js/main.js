@@ -110,3 +110,10 @@ $(document).ready(function(){
 })
 
 window.onresize = cloudImage;
+
+
+$(document).scroll(function(e) {
+  $('.rocket').css(
+      'transform', `translateY(-${$(document).scrollTop()*0.4}px)`
+  )
+})
