@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Patua+One');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
-
 // Medias querys
 $breakpoints: (
   'xs': "(min-width: 0px) and (max-width: 767px)",
@@ -12,28 +8,5 @@ $breakpoints: (
 ) !default;
 
 // Fonts
-$patua: 'Patua One', cursive; // Keppler Logo
-$montserrat: 'Montserrat', sans-serif; // Titles
-$opensans: 'Open Sans', sans-serif; // Subtitles and text
-
-// Colors
-$keppler-main: #da291c;
-$dark-red: #bc1e1b;
-$light-blue: #009cde;
-$dark-blue: #00629b;
-$main-black: #1a1515;
-$subtitles: #6b6161;
-$gray: #b7b7b7;
-$about-bg: #f5f5f5;
-$white: #fff;
-
-// Gradient (Products)
-$first-red: rgba(242, 70, 58, 1);
-$second-red: rgba(166, 26, 23, 1);
-
-$first-blue: rgba(51, 51, 102, 1);
-$second-blue: rgba(36, 45, 75, 1);
-$third-blue: rgba(30, 43, 64, 1);
-
-$red-gradient: linear-gradient(to bottom, $first-red 0%, $second-red 100%);
-$blue-gradient: linear-gradient(to bottom, $first-blue 0%, $second-blue 51%, $third-blue 100%);
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+$quick: 'Quicksand', sans-serif;

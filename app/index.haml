@@ -7,28 +7,42 @@
   %head
     %meta{ charset: 'UTF-8' }
     %meta{ content: 'width=device-width, initial-scale=1.0', name: 'viewport' }
-    %meta{ name: 'theme-color', content: '#fff' }
-    %title Crea tu sitio web con Keppler Admin hoy mismo
-    %link{ rel: 'shortcut icon', href: 'assets/img/favicon.png' }
-    %link{ rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css' }
-    %link{ rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.1.0/css/all.css' }
+    %meta{ name: 'theme-color', content: '#fa7268' }
+    %title Paola Vargas | Web Developer
+    %link{ rel: 'shortcut icon', href: 'assets/img/favicon.svg' }
+    %link{ rel: 'stylesheet', href: 'assets/css/icofont.css' }
+    %link{ rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' }
     %link{ rel: 'stylesheet', href: 'assets/css/slick-theme.css' }
     %link{ rel: 'stylesheet', href: 'assets/css/slick.css' }
     %link{ rel: 'stylesheet', href: 'assets/css/main.css' }
   %body
-
-    %a.return-to-top{ href: 'javascript:', id: 'return-to-top' }
-      %i.fa.fa-chevron-up
-
-    = render('app/partials/es/_header.haml')
-    = render('app/partials/es/_features.haml')
-    = render('app/partials/es/_product.haml')
-    = render('app/partials/es/_about.haml')
-    = render('app/partials/es/_footer.haml')
-
+    %section{ id: 'app' }
+      .container
+        .row
+          .col-lg-3
+            .personal-box
+              .personal-header
+                %img{ src: 'assets/img/profile.png', alt: '' }
+                %h3 Paola Vargas
+                %span Front-end Web Developer
+                %ul
+                  %li
+                    %a.rrss{ href: 'https://www.linkedin.com/in/paolavrgs', target: 'blank' }
+                      %i.icofont-linkedin
+                  %li
+                    %a.rrss{ href: 'https://www.github.com/paolavrgs', target: 'blank' }
+                      %i.icofont-github
+                %a.btn.btn-custom.download{ target: 'blank', href: 'assets/img/CV_paolavrgs.pdf' } Download CV
+          .col-lg-9
+            = render('app/partials/_personal.haml')
+            = render('app/partials/_portfolio.haml')
+            = render('app/partials/_timeline.haml')
+      %svg#crtBgShape1.hidden-sm.hidden-xs{height: "519", width: "758"}
+        %polygon.pol{fill: "#c0c0c0", points: "0,455,693,352,173,0,92,0,0,71"}
+      %svg#crtBgShape2.hidden-sm.hidden-xs{height: "536", width: "633"}
+        %polygon{fill: "#fa7268", points: "0,0,633,0,633,536"}
     %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
-    %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js' }
-    %script{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js' }
-    %script{ src: 'https://www.google.com/recaptcha/api.js' }
+    %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' }
+    %script{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' }
     %script{ src: 'assets/js/slick.min.js' }
     %script{ src: 'assets/js/main.js' }

@@ -1,0 +1,73 @@
+.item {
+  width: 100%;
+  height: 250px;
+  @include bg(cover, no-repeat, center);
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+  &:hover {
+    .mask-item {
+      opacity: 1;
+      transition: opacity ease-in-out .5s;
+    }
+  }
+}
+
+.mask-item {
+  background-color: rgba(0, 0, 0, .8);
+  position: absolute;
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  opacity: 0;
+  transition: opacity ease-in-out .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h5 {
+    color: #fff;
+  }
+}
+
+.qtrf {
+  background-image: url('../img/qtrf_cover.png');
+}
+
+.enterprisepf {
+  background-image: url('../img/enterprise_cover.png');
+}
+
+.arismendy {
+  background-image: url('../img/arismendy_cover.png');
+}
+
+.dinastia {
+  background-image: url('../img/dinastia_cover.png');
+}
+
+.brieva {
+  background-image: url('../img/brieva_cover.png');
+}
+
+.keppler {
+  background-image: url('../img/keppler_cover.png');
+}
+
+.tucana {
+  background-image: url('../img/tucana_cover.png');
+}
+
+.prodesa {
+  background-image: url('../img/prodesa_cover.png');
+}
+
+.sandbox {
+  background-image: url('../img/sandbox_cover.png');
+}
+
+.keppleradmin {
+  background-image: url('../img/keppleradmin_cover.png');
+}
