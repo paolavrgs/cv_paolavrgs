@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
-
 body {
   font-family: "Quicksand", sans-serif;
   background-color: #f3f3f3;
@@ -182,43 +180,43 @@ dt.text-upper {
 }
 
 .qtrf {
-  background-image: url("../img/qtrf_cover.png");
+  background-image: url("../img/qtrf_cover.webp");
 }
 
 .enterprisepf {
-  background-image: url("../img/enterprise_cover.png");
+  background-image: url("../img/enterprise_cover.webp");
 }
 
 .arismendy {
-  background-image: url("../img/arismendy_cover.png");
+  background-image: url("../img/arismendy_cover.webp");
 }
 
 .dinastia {
-  background-image: url("../img/dinastia_cover.png");
+  background-image: url("../img/dinastia_cover.webp");
 }
 
 .brieva {
-  background-image: url("../img/brieva_cover.png");
+  background-image: url("../img/brieva_cover.webp");
 }
 
 .keppler {
-  background-image: url("../img/keppler_cover.png");
+  background-image: url("../img/keppler_cover.webp");
 }
 
 .tucana {
-  background-image: url("../img/tucana_cover.png");
+  background-image: url("../img/tucana_cover.webp");
 }
 
 .prodesa {
-  background-image: url("../img/prodesa_cover.png");
+  background-image: url("../img/prodesa_cover.webp");
 }
 
 .sandbox {
-  background-image: url("../img/sandbox_cover.png");
+  background-image: url("../img/sandbox_cover.webp");
 }
 
 .keppleradmin {
-  background-image: url("../img/keppleradmin_cover.png");
+  background-image: url("../img/keppleradmin_cover.webp");
 }
 
 .timeline {
