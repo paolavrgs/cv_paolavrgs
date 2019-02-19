@@ -38,3 +38,9 @@ $('.modal').on('shown.bs.modal', function () {
     dots: true
   });
 })
+
+WebFont.load({
+  google: {
+    families: ['Quicksand:400,500,700']
+  }
+});
