@@ -44,3 +44,11 @@ WebFont.load({
     families: ['Quicksand:400,500,700']
   }
 });
+
+$('.personal-header img').mouseenter(function() {
+  $('.personal-header img').attr('src','assets/img/profile_hover.webp');
+})
+
+$('.personal-header img').mouseleave(function() {
+  $('.personal-header img').attr('src','assets/img/profile.webp');
+})
