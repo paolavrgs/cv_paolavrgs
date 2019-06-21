@@ -19,17 +19,17 @@ a:hover {
 }
 
 .btn-custom {
-  background-color: #fa7268;
+  background-color: #cce8cc;
   border-radius: 15px;
   font-weight: 600;
   padding: 5px 20px;
   transition: all ease-in-out .3s;
   font-size: 12px;
-  color: #252525;
+  color: #373741;
 }
 
 .btn-custom:hover {
-  background-color: #f95b4f;
+  background-color: #86c886;
   transition: all ease-in-out .3s;
 }
 
@@ -78,12 +78,12 @@ a:hover {
 }
 
 a.rrss {
-  color: #252525;
+  color: #373741;
   font-size: 18px;
 }
 
 a.rrss:hover {
-  color: #fa7268;
+  color: #cce8cc;
 }
 
 .resume-box {
@@ -219,6 +219,10 @@ dt.text-upper {
   background-image: url("../img/keppleradmin_cover.webp");
 }
 
+.xale {
+  background-image: url("../img/2xale_cover.webp");
+}
+
 .timeline {
   position: relative;
 }
@@ -282,7 +286,7 @@ dt.text-upper {
   margin-left: 15px;
   position: relative;
   display: inline-block;
-  background-color: #fa7268;
+  background-color: #cce8cc;
 }
 
 .timeline-date span {
@@ -358,7 +362,7 @@ dt.text-upper {
     border-bottom: 15px solid transparent !important;
     border-right: 10px solid transparent !important;
     border-left: 10px solid transparent;
-    border-color: #fa7268;
+    border-color: #cce8cc;
   }
 }
 
@@ -400,6 +404,6 @@ dt.text-upper {
   width: 10px;
   height: 5px;
   border-radius: 5px;
-  background-color: #fa7268;
+  background-color: #cce8cc;
   content: '';
 }

@@ -27,7 +27,7 @@ var arr = []
 for (let i=0; i<project.length; i++) {
   arr.push(project[i].dataset.project)
 }
-console.log(arr)
+// console.log(arr)
 
 
 $('.modal').on('shown.bs.modal', function () {

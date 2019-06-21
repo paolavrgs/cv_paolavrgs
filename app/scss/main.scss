@@ -24,16 +24,16 @@ a {
 }
 
 .btn-custom {
-  background-color: #fa7268;
+  background-color: $aqua;
   border-radius: 15px;
   font-weight: 600;
   padding: 5px 20px;
   transition: all ease-in-out .3s;
   font-size: 12px;
-  color: #252525;
+  color: $gray;
 
   &:hover {
-    background-color: #f95b4f;
+    background-color: darken($aqua, 20%);
     transition: all ease-in-out .3s;
   }
 }
@@ -82,11 +82,11 @@ a {
 }
 
 a.rrss {
-  color: #252525;
+  color: $gray;
   font-size: 18px;
 
   &:hover {
-    color: #fa7268;
+    color: $aqua;
   }
 }
 
@@ -215,7 +215,7 @@ dt.text-upper {
   margin-left: 15px;
   position: relative;
   display: inline-block;
-  background-color: #fa7268;
+  background-color: $aqua;
 }
 
 .timeline-date span {
@@ -291,7 +291,7 @@ dt.text-upper {
       border-bottom: 15px solid transparent!important;
       border-right: 10px solid transparent!important;
       border-left: 10px solid transparent;
-      border-color: #fa7268;
+      border-color: $aqua;
   }
 }
 
@@ -332,6 +332,6 @@ dt.text-upper {
   width: 10px;
   height: 5px;
   border-radius: 5px;
-  background-color: #fa7268;
+  background-color: $aqua;
   content: '';
 }

@@ -3,6 +3,11 @@
     %h3.title.mb-5 Portfolio
     .row
       .col-lg-6
+        .item.xale
+          .mask-item
+            %h5 2xale - Web
+            %a.btn.btn-custom{'data-project'=>'xale', 'data-toggle' => 'modal', 'data-target' => '#xale'} View More
+      .col-lg-6
         .item.sandbox
           .mask-item
             %h5 Keppler - Sandbox
@@ -240,7 +245,7 @@
                   %dd
                     %a{ href: 'https://sandbox.keppleradmin.com/' } sandbox.keppleradmin.com
                   %dt.text-upper Date
-                  %dd Currently - In process
+                  %dd November 2018
 .modal.fade{ 'data-project'=> '', id:'keppleradmin', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -260,4 +265,25 @@
                 %h3 Keppler Admin - CMS
                 %strong Web App
                 %a{ href: 'https://keppleradmin.com/' } keppleradmin.com
-                %a{ href: 'https://sandbox.keppleradmin.com/' } sandbox.keppleradmin.com             
+                %a{ href: 'https://sandbox.keppleradmin.com/' } sandbox.keppleradmin.com
+.modal.fade{ 'data-project'=> '', id:'xale', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body
+        .container
+          .row
+            .col-lg-8
+              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
+                %source{src: 'assets/img/2xale.mp4', type: 'video/mp4'}
+            .col-lg-4
+              %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+                %span{'aria-hidden' => 'true'} ×
+              .project-details
+                %dl.dl-horizontal.clear-mrg
+                  %dt.text-upper Company Name
+                  %dd 2xale
+                  %dt.text-upper Demo:
+                  %dd
+                    %a{ href: 'https://2xale.com' } 2xale.com
+                  %dt.text-upper Date
+                  %dd April 2019

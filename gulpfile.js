@@ -82,6 +82,11 @@ gulp.task('images', function(){
   .pipe(gulp.dest('docs/assets/img'))
 });
 
+gulp.task('pdf', function(){
+  return gulp.src('app/pdf/**/*.+(pdf)')
+  .pipe(gulp.dest('docs/assets/pdf'))
+});
+
 
 //Move fonts to docs/fonts
 gulp.task('fonts', function() {
@@ -147,7 +152,7 @@ gulp.task('default', ['browserSync', 'compile_haml', 'compile_sass', 'css', 'js'
 
 gulp.task('set', function (callback) {
   runSequence('clean:docs', 'add_jquery',
-    ['compile_haml','compile_sass', 'images', 'fonts', 'css', 'js']
+    ['compile_haml','compile_sass', 'images', 'pdf', 'fonts', 'css', 'js']
   )
 });
 
