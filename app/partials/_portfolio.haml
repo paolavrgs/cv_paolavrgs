@@ -311,7 +311,8 @@
         .container
           .row
             .col-lg-8
-              %img.w-100{src: 'assets/img/projects/2xale.gif'}
+              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
+                %source{src: 'assets/img/projects/2xale.webm', type: 'video/webm'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
