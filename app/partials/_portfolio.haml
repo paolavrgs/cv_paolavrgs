@@ -3,10 +3,45 @@
     %h3.title.mb-5 Portfolio
     .row
       .col-lg-6
+        .item.toscana
+          .mask-item
+            %h5 Toscana Ciudadela - Landing Page
+            %a.btn.btn-custom{'data-project'=>'toscana', 'data-toggle' => 'modal', 'data-target' => '#toscana'} View More
+      .col-lg-6
+        .item.paimun
+          .mask-item
+            %h5 Cabañas Paimun - Landing Page
+            %a.btn.btn-custom{'data-project'=>'paimun', 'data-toggle' => 'modal', 'data-target' => '#paimun'} View More
+      .col-lg-6
+        .item.collagelabs
+          .mask-item
+            %h5 CollageLabs - Landing Page
+            %a.btn.btn-custom{'data-project'=>'collagelabs', 'data-toggle' => 'modal', 'data-target' => '#collagelabs'} View More
+      .col-lg-6
+        .item.hvbnb
+          .mask-item
+            %h5 HVbnb - Info Page
+            %a.btn.btn-custom{'data-project'=>'hvbnb', 'data-toggle' => 'modal', 'data-target' => '#hvbnb'} View More
+      .col-lg-6
+        .item.cajadepati
+          .mask-item
+            %h5 La Caja de Pati - Web/Blog
+            %a.btn.btn-custom{'data-project'=>'cajadepati', 'data-toggle' => 'modal', 'data-target' => '#cajadepati'} View More
+      .col-lg-6
+        .item.zeppelin
+          .mask-item
+            %h5 Zeppelin Gastropub - Web
+            %a.btn.btn-custom{'data-project'=>'zeppelin', 'data-toggle' => 'modal', 'data-target' => '#zeppelin'} View More
+      .col-lg-6
         .item.xale
           .mask-item
             %h5 2xale - Web
             %a.btn.btn-custom{'data-project'=>'xale', 'data-toggle' => 'modal', 'data-target' => '#xale'} View More
+      .col-lg-6
+        .item.surftech
+          .mask-item
+            %h5 Surftech - Ecommerce
+            %a.btn.btn-custom{'data-project'=>'surftech', 'data-toggle' => 'modal', 'data-target' => '#surftech'} View More
       .col-lg-6
         .item.sandbox
           .mask-item
@@ -25,37 +60,37 @@
       .col-lg-6
         .item.tucana
           .mask-item
-            %h5 Tucana Designs
+            %h5 Tucana Designs - Web
             %a.btn.btn-custom{'data-project'=>'tucana', 'data-toggle' => 'modal', 'data-target' => '#tucana'} View More
       .col-lg-6
         .item.brieva
           .mask-item
-            %h5 Grupo Brieva Arquitectura
+            %h5 Grupo Brieva Arquitectura - Web
             %a.btn.btn-custom{'data-project'=>'brieva', 'data-toggle' => 'modal', 'data-target' => '#brieva'} View More
-      .col-lg-6
-        .item.qtrf
-          .mask-item
-            %h5 QTRF
-            %a.btn.btn-custom{ 'data-project'=>'qtrf', 'data-toggle' => 'modal', 'data-target' => '#qtrf' } View More
       .col-lg-6
         .item.arismendy
           .mask-item
-            %h5 Arismendy Andrade
+            %h5 Arismendy Andrade - Landing Page
             %a.btn.btn-custom{'data-project'=>'arismendy', 'data-toggle' => 'modal', 'data-target' => '#arismendy'} View More
+      .col-lg-6
+        .item.qtrf
+          .mask-item
+            %h5 QTRF Net Consulting - Web/Blog
+            %a.btn.btn-custom{ 'data-project'=>'qtrf', 'data-toggle' => 'modal', 'data-target' => '#qtrf' } View More
       .col-lg-6
         .item.prodesa
           .mask-item
-            %h5 Prodesa
+            %h5 Prodesa - Web
             %a.btn.btn-custom{'data-project'=>'prodesa', 'data-toggle' => 'modal', 'data-target' => '#prodesa'} View More
       .col-lg-6
         .item.dinastia
           .mask-item
-            %h5 Hotel Dinastia Coro
+            %h5 Hotel Dinastia Coro - Web
             %a.btn.btn-custom{'data-project'=>'dinastia', 'data-toggle' => 'modal', 'data-target' => '#dinastia'} View More
       .col-lg-6
         .item.enterprisepf
           .mask-item
-            %h5 Enterprises Punto Fijo
+            %h5 Enterprises Punto Fijo - Landing Page
             %a.btn.btn-custom{'data-project'=>'enterprise', 'data-toggle' => 'modal', 'data-target' => '#enterprisepf'} View More
 .modal.fade{ 'data-project'=> '', id:'qtrf', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
@@ -64,20 +99,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/qtrf.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/qtrf.gif', alt: '2xale'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd QTRF NET CONSULTING C.A
-                  %dt.text-upper Web page:
+                  %h3 QTRF NET CONSULTING C.A
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'http://qtrfnet.com' } qtrfnet.com
                   %dt.text-upper Date
                   %dd January 2018
+                  %dt.text-upper Status
+                  %dd Down
 .modal.fade{ 'data-project'=> '', id:'enterprisepf', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -85,20 +120,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/enterprise.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/enterprise.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd Enterprises Punto Fijo
-                  %dt.text-upper Web page:
+                  %h3 Enterprises Punto Fijo
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'http://enterprisespf.com' } enterprisespf.com
                   %dt.text-upper Date
                   %dd August 2017
+                  %dt.text-upper Status
+                  %dd Available
 .modal.fade{ 'data-project'=> '', id:'arismendy', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -106,20 +141,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/arismendy.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/arismendy.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd Arismendy Andrade
-                  %dt.text-upper Web page:
+                  %h3 Arismendy Andrade
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'http://arismendyandrade.com' } arismendyandrade.com
                   %dt.text-upper Date
                   %dd February 2018
+                  %dt.text-upper Status
+                  %dd Down
 .modal.fade{ 'data-project'=> '', id:'dinastia', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -127,20 +162,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/dinastia.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/dinastia.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd Hotel Dinastia Coro
-                  %dt.text-upper Web page:
+                  %h3 Hotel Dinastia Coro
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'http://hoteldinastiacoro.com/' } hoteldinastiacoro.com
                   %dt.text-upper Date
                   %dd November 2017
+                  %dt.text-upper Status
+                  %dd Available
 .modal.fade{ 'data-project'=> '', id:'keppler', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -148,20 +183,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/keppler.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/keppler.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd Keppler Admin
-                  %dt.text-upper Landing page:
+                  %h3 Keppler Admin
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'https://keppleradmin.com/' } keppleradmin.com
                   %dt.text-upper Date
                   %dd August 2018
+                  %dt.text-upper Status
+                  %dd Down
 .modal.fade{ 'data-project'=> '', id:'brieva', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -169,20 +204,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/brieva.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/brieva.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd Grupo Brieva Arquitectura
-                  %dt.text-upper Web page:
+                  %h3 Grupo Brieva Arquitectura
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'http://arquitectura.grupobrieva.com' } arquitectura.grupobrieva.com
                   %dt.text-upper Date
                   %dd May 2018
+                  %dt.text-upper Status
+                  %dd Down
 .modal.fade{ 'data-project'=> '', id:'tucana', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -190,20 +225,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/tucana.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/tucana.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd Tucana Designs
-                  %dt.text-upper Web page:
+                  %h3 Tucana Designs
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'https://tucana.com.ec/' } tucana.com.ec
                   %dt.text-upper Date
                   %dd July 2018
+                  %dt.text-upper Status
+                  %dd Available but updated
 .modal.fade{ 'data-project'=> '', id:'prodesa', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -211,20 +246,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/prodesa.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/prodesa.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd Prodesa
-                  %dt.text-upper Web page:
+                  %h3 Prodesa
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'http://prodesa.com.ve/' } prodesa.com.ve
                   %dt.text-upper Date
                   %dd December 2017
+                  %dt.text-upper Status
+                  %dd Down
 .modal.fade{ 'data-project'=> '', id:'sandbox', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -232,20 +267,20 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/sandbox.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/sandbox.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd Keppler - Sandbox
-                  %dt.text-upper Demo:
+                  %h3 Keppler - Sandbox
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'https://sandbox.keppleradmin.com/' } sandbox.keppleradmin.com
                   %dt.text-upper Date
                   %dd November 2018
+                  %dt.text-upper Status
+                  %dd Down
 .modal.fade{ 'data-project'=> '', id:'keppleradmin', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -266,6 +301,9 @@
                 %strong Web App
                 %a{ href: 'https://keppleradmin.com/' } keppleradmin.com
                 %a{ href: 'https://sandbox.keppleradmin.com/' } sandbox.keppleradmin.com
+                %dl.dl-horizontal.clear-mrg
+                  %dt.text-upper Status
+                  %dd No longer maintained app
 .modal.fade{ 'data-project'=> '', id:'xale', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
   .modal-dialog{role: 'document'}
     .modal-content
@@ -273,17 +311,164 @@
         .container
           .row
             .col-lg-8
-              %video.w-100{autoplay: 'true', loop: 'true', muted: '', poster: ''}
-                %source{src: 'assets/img/2xale.mp4', type: 'video/mp4'}
+              %img.w-100{src: 'assets/img/projects/2xale.gif'}
             .col-lg-4
               %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
                 %span{'aria-hidden' => 'true'} ×
               .project-details
                 %dl.dl-horizontal.clear-mrg
-                  %dt.text-upper Company Name
-                  %dd 2xale
-                  %dt.text-upper Demo:
+                  %h3 2xale
+                  %dt.text-upper Website:
                   %dd
                     %a{ href: 'https://2xale.com' } 2xale.com
                   %dt.text-upper Date
                   %dd April 2019
+                  %dt.text-upper Status
+                  %dd Available but updated
+.modal.fade{ 'data-project'=> '', id:'zeppelin', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body
+        .container
+          .row
+            .col-lg-8
+              %img.w-100{src: 'assets/img/projects/zeppelin.gif'}
+            .col-lg-4
+              %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+                %span{'aria-hidden' => 'true'} ×
+              .project-details
+                %dl.dl-horizontal.clear-mrg
+                  %h3 Zeppelin Gastropub
+                  %dt.text-upper Website:
+                  %dd
+                    %a{ href: 'https://zeppelingastropub.com/' } zeppelingastropub.com
+                  %dt.text-upper Date
+                  %dd June 2019
+                  %dt.text-upper Status
+                  %dd Available
+.modal.fade{ 'data-project'=> '', id:'surftech', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body
+        .container
+          .row
+            .col-lg-8
+              %img.w-100{src: 'assets/img/projects/surftech.gif'}
+            .col-lg-4
+              %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+                %span{'aria-hidden' => 'true'} ×
+              .project-details
+                %dl.dl-horizontal.clear-mrg
+                  %h3 Surftech
+                  %dt.text-upper Website:
+                  %dd
+                    %a{ href: 'https://surftech.com/' } surftech.com
+                  %dt.text-upper Date
+                  %dd January 2019
+                  %dt.text-upper Status
+                  %dd Available
+.modal.fade{ 'data-project'=> '', id:'collagelabs', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body
+        .container
+          .row
+            .col-lg-8
+              %img.w-100{src: 'assets/img/projects/collagelabs.gif'}
+            .col-lg-4
+              %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+                %span{'aria-hidden' => 'true'} ×
+              .project-details
+                %dl.dl-horizontal.clear-mrg
+                  %h3 CollageLabs
+                  %dt.text-upper Website:
+                  %dd
+                    %a{ href: 'https://collagelabs.org/' } collagelabs.org
+                  %dt.text-upper Date
+                  %dd October 2019
+                  %dt.text-upper Status
+                  %dd Available
+.modal.fade{ 'data-project'=> '', id:'paimun', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body
+        .container
+          .row
+            .col-lg-8
+              %img.w-100{src: 'assets/img/projects/paimun.gif'}
+            .col-lg-4
+              %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+                %span{'aria-hidden' => 'true'} ×
+              .project-details
+                %dl.dl-horizontal.clear-mrg
+                  %h3 Cabañas Paimun
+                  %dt.text-upper Website:
+                  %dd
+                    %a{ href: 'https://www.cabañaspaimun.cl/' } cabañaspaimun.cl
+                  %dt.text-upper Date
+                  %dd November 2019
+                  %dt.text-upper Status
+                  %dd Available
+.modal.fade{ 'data-project'=> '', id:'toscana', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body
+        .container
+          .row
+            .col-lg-8
+              %img.w-100{src: 'assets/img/projects/toscana.gif'}
+            .col-lg-4
+              %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+                %span{'aria-hidden' => 'true'} ×
+              .project-details
+                %dl.dl-horizontal.clear-mrg
+                  %h3 Toscana Ciudadela
+                  %dt.text-upper Demo:
+                  %dd
+                    %a{ href: 'https://paolavrgs.github.io/toscana-ciudadela/' } paolavrgs.github.io/toscana-ciudadela
+                  %dt.text-upper Date
+                  %dd April - May 2020
+                  %dt.text-upper Status
+                  %dd Available
+.modal.fade{ 'data-project'=> '', id:'cajadepati', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body
+        .container
+          .row
+            .col-lg-8
+              %img.w-100{src: 'assets/img/projects/cajadepati.jpg'}
+            .col-lg-4
+              %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+                %span{'aria-hidden' => 'true'} ×
+              .project-details
+                %dl.dl-horizontal.clear-mrg
+                  %h3 La Caja de Pati
+                  %dt.text-upper Website:
+                  %dd
+                    %a{ href: 'https://lacajadepati.com/' } lacajadepati.com
+                  %dt.text-upper Date
+                  %dd August 2019
+                  %dt.text-upper Status
+                  %dd Down
+.modal.fade{ 'data-project'=> '', id:'hvbnb', 'aria-hidden' => 'true', 'aria-labelledby' => 'itemLabel', role: 'dialog', tabindex: '-1' }
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-body
+        .container
+          .row
+            .col-lg-8
+              %img.w-100{src: 'assets/img/projects/hvbnb.gif'}
+            .col-lg-4
+              %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', type: 'button'}
+                %span{'aria-hidden' => 'true'} ×
+              .project-details
+                %dl.dl-horizontal.clear-mrg
+                  %h3 HVbnb - Rent a Home
+                  %dt.text-upper Website:
+                  %dd
+                    %a{ href: 'http://hv-bnb.santiagolab.cl/' } hv-bnb.santiagolab.cl
+                  %dt.text-upper Date
+                  %dd September 2019
+                  %dt.text-upper Status
+                  %dd Available

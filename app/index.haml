@@ -25,14 +25,14 @@
                 %img{ src: 'assets/img/profile.webp', alt: '' }
                 %h3 Paola Vargas
                 %span Front-end Web Developer
-                %ul
+                %ul.rrss
                   %li
-                    %a.rrss{ href: 'https://www.linkedin.com/in/paolavrgs', target: 'blank' }
+                    %a{ href: 'https://www.linkedin.com/in/paolavrgs', target: 'blank' }
                       %i.icofont-linkedin
-                  %li
-                    %a.rrss{ href: 'https://www.github.com/paolavrgs', target: 'blank' }
-                      %i.icofont-github
-                %a.btn.btn-custom.download{ target: 'blank', href: 'assets/pdf/CV- PAOLA VARGAS - 2019.pdf' } Download CV
+                  %li.ml-1
+                    %a{ href: 'https://www.github.com/paolavrgs', target: 'blank' }
+                      %i.fa.fa-github
+                %a.btn.btn-custom.download{ target: 'blank', href: 'assets/pdf/CV- PAOLA VARGAS - 2020.pdf' } Download CV
           .col-lg-9
             = render('app/partials/_personal.haml')
             = render('app/partials/_portfolio.haml')
@@ -42,6 +42,7 @@
       %svg#crtBgShape2.hidden-sm.hidden-xs{height: "536", width: "633"}
         %polygon{fill: "#facfad", points: "0,0,633,0,633,536"}
     %script{ src: 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js' }
+    %script{ src: "https://use.fontawesome.com/70a3cb5d53.js" }
     %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
     %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' }
     %script{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' }

@@ -63,7 +63,7 @@ a {
   padding: 15px 0;
 
   img {
-    width: 150px;
+    width: 180px;
   }
 
   h3 {
@@ -81,12 +81,15 @@ a {
   }
 }
 
-a.rrss {
-  color: $gray;
-  font-size: 18px;
-
-  &:hover {
-    color: $aqua;
+.rrss {
+  
+  a {
+    color: $gray;
+    font-size: 23px;
+  
+    &:hover {
+      color: $aqua;
+    }
   }
 }
 
