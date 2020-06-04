@@ -94,6 +94,12 @@ a:hover {
   margin-bottom: 40px;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .resume-box {
+    padding: 20px;
+  }
+}
+
 .title {
   text-transform: uppercase;
   font-weight: 700;
@@ -154,6 +160,18 @@ dt.text-upper {
   position: relative;
   border-radius: 5px;
   margin-bottom: 30px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .item {
+    height: 50vw;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .item {
+    height: 15vw;
+  }
 }
 
 .item:hover .mask-item {
@@ -318,6 +336,12 @@ dt.text-upper {
   background-color: #cce8cc;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .timeline-date {
+    width: auto;
+  }
+}
+
 .timeline-date span {
   overflow: hidden;
   position: relative;
@@ -411,7 +435,13 @@ dt.text-upper {
 }
 
 .modal-dialog {
-  max-width: 90vw;
+  max-width: 80vw;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .modal-dialog {
+    max-width: 100%;
+  }
 }
 
 .modal-header {
